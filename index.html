@@ -1390,9 +1390,11 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   var stickyShown = false;
   var floatShown  = false;
   var lastScrollY = 0;
+  var scrollQueued = false;
   if (nav) nav.style.transition = 'transform .3s ease';
 
-  window.addEventListener('scroll', function () {
+  function updateScrollUI() {
+    scrollQueued = false;
     var y = window.scrollY;
 
     if (stickyCta) {
@@ -1417,6 +1419,13 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
 
     if (nav) nav.style.transform = (y > lastScrollY && y > 140) ? 'translateY(-100%)' : '';
     lastScrollY = y;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!scrollQueued) {
+      scrollQueued = true;
+      requestAnimationFrame(updateScrollUI);
+    }
   }, { passive: true });
 
   } catch (e) { console.error('[SE]', e); }
