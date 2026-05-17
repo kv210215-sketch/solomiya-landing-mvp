@@ -1,83 +1,87 @@
 # DO NOT TOUCH - Solomiya Energy Landing MVP
 
-Дата: 2026-05-17
+**Updated:** 2026-05-18  
+**Production:** Cloudflare Pages · https://solomiya-energy-landing.pages.dev/  
+**Telegram:** Stable — real leads in production
 
-Цей файл визначає зони, які не можна редагувати, переміщати, видаляти або merge-ити без окремого прямого дозволу.
+Цей файл визначає зони, які не можна редагувати без окремого прямого дозволу та повного QA.
 
-## Deploy Copy
+---
 
-Read-only deploy/export snapshot:
+## Active production (highest risk)
 
-`C:\Users\Andriy\Downloads\solomiya_netlify\netlify_deploy`
+| Item | Why |
+|------|-----|
+| `index.html` — `#mainForm`, `#fphone`, `fetch('/api/lead', …)` | Breaks live lead capture |
+| `functions/api/lead.js` | **Only** active API handler on Cloudflare |
+| Cloudflare env: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `ALLOWED_ORIGIN` | Breaks Telegram delivery |
+| Cloudflare Pages project / production deployment | Live site |
 
-Не можна:
+**Rules:**
 
-- редагувати;
-- видаляти;
-- переміщати;
-- перейменовувати;
-- використовувати як source-of-truth;
-- автоматично merge-ити у `D:\solomiya-landing-mvp`.
+- Do not modify active `lead.js`.
+- Do not modify form fetch logic.
+- Do not modify `TELEGRAM_*` env values without owner approval.
+- Do not change active deployment logic.
 
-## Old Backup
+---
 
-Не чіпати без окремого дозволу:
+## Production forms
 
-- `D:\solomiya-landing-mvp\backup`
-- `D:\solomiya-landing-mvp\backup\index.html.2026-05-14.bak`
-- `D:\solomiya-landing-mvp\backup\index.html.pre-optimization.bak`
+Do not change without explicit permission:
 
-## Production Forms
+- form markup and field `id` / `name`;
+- honeypot (`#fwebsite`);
+- phone validation and error UI;
+- success/error screens after submit.
 
-Не змінювати без окремого дозволу:
+---
 
-- form markup;
-- `name`, `id`, hidden inputs;
-- Netlify Forms attributes;
-- honeypot fields;
-- lead capture logic;
-- EmailJS or form submission logic;
-- validation and success/error behavior.
+## Core production files
 
-## Netlify Settings And Deploy Logic
+- `index.html`
+- `functions/api/lead.js`
+- `robots.txt`, `sitemap.xml`
+- `_headers`
+- `favicon.*`, `og-image.jpg`, `apple-touch-icon.png`
 
-Не змінювати без окремого дозволу:
+---
 
-- `D:\solomiya-landing-mvp\netlify.toml`
-- `D:\solomiya-landing-mvp\_headers`
-- any `_redirects` file
-- Netlify dashboard/site settings
-- build/publish settings
-- redirects
-- headers
-- cache/security config
+## Legacy (do not use for incidents)
 
-## API And Functions
+Not production — do not edit to fix live Telegram issues:
 
-Не змінювати без окремого дозволу:
+- `netlify.toml`, `netlify/functions/lead.js`
+- `api/lead.js` (Vercel)
 
-- `D:\solomiya-landing-mvp\api`
-- `D:\solomiya-landing-mvp\api\lead.js`
-- `D:\solomiya-landing-mvp\functions`
-- `D:\solomiya-landing-mvp\functions\api\lead.js`
-- `D:\solomiya-landing-mvp\netlify\functions`
-- `D:\solomiya-landing-mvp\netlify\functions\lead.js`
+See `docs/archive/netlify/README.md`.
 
-## Core Production Files
+---
 
-Не змінювати без окремого дозволу:
+## Deploy copy (read-only)
 
-- `D:\solomiya-landing-mvp\index.html`
-- `D:\solomiya-landing-mvp\robots.txt`
-- `D:\solomiya-landing-mvp\sitemap.xml`
+`C:\Users\Andriy\Downloads\solomiya_netlify\netlify_deploy` — do not merge into source.
+
+---
+
+## Local backups
+
+`backup/` — local HTML snapshots (gitignored). Do not delete without permission.
+
+---
 
 ## Secrets
 
-Не відкривати і не змінювати без окремого дозволу:
+Never commit or paste into docs:
 
-- `.env`
-- API keys
-- tokens
-- credentials
-- Netlify auth/session files
+- `.env` with real values
+- `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+- API keys, credentials
 
+---
+
+## Safe to change (documentation only tasks)
+
+- `docs/` (except when task says otherwise)
+- `README.md`, `project-rules.md`, `CHANGELOG.md`
+- `docs/archive/`

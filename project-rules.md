@@ -1,85 +1,91 @@
 # Project Rules - Solomiya Energy Landing MVP
 
-## Source Of Truth
+## Production status
 
-Official source-of-truth path:
+- **Live:** https://solomiya-energy-landing.pages.dev/
+- **Host:** Cloudflare Pages
+- **Telegram integration:** Stable — do not change without explicit approval and QA
 
-`D:\solomiya-landing-mvp`
+## Source of truth
 
-All AI agents, Claude Code, Codex, VS Code, Cursor, and Netlify workflow review must use this folder as the project root.
+Official path: `D:\solomiya-landing-mvp`  
+GitHub: `kv210215-sketch/solomiya-landing-mvp`
 
-## Forbidden Folders
+Active production files:
+
+- `index.html`
+- `functions/api/lead.js`
+
+## Forbidden changes (without explicit approval)
+
+- Do **not** modify `functions/api/lead.js` (active lead handler).
+- Do **not** modify form submit logic or `fetch('/api/lead')` in `index.html`.
+- Do **not** change Cloudflare env vars `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, or `ALLOWED_ORIGIN`.
+- Do **not** change active Cloudflare Pages deployment logic or replatform without a dedicated task.
+- Do **not** merge handlers (`api/`, `netlify/`) into the production path.
+
+## Forbidden folders
 
 Do not edit, move, delete, or use as source:
 
 - `C:\Users\Andriy\Downloads\solomiya_netlify\netlify_deploy`
-- `D:\solomiya-landing-mvp\backup`
-- `D:\solomiya-landing-mvp\backups\private`
+- `backup/` (local snapshots; gitignored)
+- `backups/private/`
 - any secrets or credential folders
 
-Deploy/export copy is read-only reference only.
-
-## Production Safety Rules
+## Production safety rules
 
 - Do not change `index.html` unless explicitly authorized.
 - Do not change forms unless explicitly authorized.
-- Do not change `netlify.toml`, `_headers`, redirects, API routes, or Netlify settings unless explicitly authorized.
+- Do not change `_headers` unless explicitly authorized.
 - Do not merge deploy/export copy into source automatically.
-- Do not delete backups.
+- Do not delete local backups in `backup/`.
 - Do not push to GitHub without explicit permission.
 - Do not deploy without explicit permission.
 
-## Coding Rules
+## Coding rules
 
 - Make small PR-style changes.
 - Follow existing project structure.
-- Avoid broad rewrites.
-- Avoid frontend refactors unless explicitly requested.
+- Avoid broad rewrites and architecture “improvements” unless requested.
 - Preserve user-facing content unless explicitly tasked.
-- Keep changes easy to review.
-- Add comments only when they clarify non-obvious behavior.
+- Documentation-only tasks must not touch production code paths.
 
-## AI Agent Workflow
+## AI agent workflow
 
-- Start by reading:
-  - `ai/ai-session-start.md`
-  - `docs/PROJECT-GOVERNANCE.md`
-  - `docs/SAFE-WORKFLOW.md`
-  - `docs/DO-NOT-TOUCH.md`
-- Confirm task scope before production edits.
-- Prefer docs/report files for audit and governance tasks.
-- Update `CHANGELOG.md` after meaningful workspace changes.
-- Never infer that a newer file timestamp means source-of-truth.
+Start by reading:
 
-## Netlify Rules
+- `ai/ai-session-start.md`
+- `docs/ARCHITECTURE.md`
+- `docs/TELEGRAM-INTEGRATION.md`
+- `docs/DO-NOT-TOUCH.md`
+- `docs/PROJECT-GOVERNANCE.md`
 
-- Do not edit Netlify dashboard settings without explicit permission.
-- Do not change `netlify.toml` without explicit permission.
-- Preserve `/api/lead` routing unless explicitly tasked.
-- Preserve headers/security config unless explicitly tasked.
-- Keep deploy/export snapshots read-only.
+Update `CHANGELOG.md` after meaningful workspace changes.
 
-## Forms Rules
+## Legacy Netlify / Vercel
 
-- Do not change form markup, hidden fields, field names, validation, submission handlers, Netlify Forms attributes, EmailJS logic, or lead functions without explicit permission.
-- After any authorized form/API/function change, test successful submit and failure state.
+- Netlify is **not** production. See `docs/archive/netlify/README.md`.
+- Do not edit `netlify.toml` or Netlify functions for routine tasks.
+- `api/lead.js` (Vercel) is legacy only.
+
+## Forms rules
+
+- Do not change form markup, field names, validation, submission handlers, or lead functions without explicit permission.
+- After any authorized form/API change: test desktop + iPhone Safari and confirm Telegram delivery.
 - Never commit secrets or live tokens.
 
-## SEO Rules
+## SEO rules
 
-- Preserve `robots.txt`, `sitemap.xml`, canonical URL, title, description, Open Graph, Twitter metadata, and structured SEO content unless explicitly tasked.
-- SEO changes must be reviewed as production-risk changes.
+- Preserve `robots.txt`, `sitemap.xml`, canonical URL, and meta tags unless explicitly tasked.
 
-## Mobile Rules
+## Mobile rules
 
 - Treat mobile as the primary production viewport.
-- Do not introduce layout shifts, overlapping text, or inaccessible tap targets.
 - Test mobile after any authorized UI change.
 
-## Security Rules
+## Security rules
 
 - No secrets in git.
 - Use `.env.example` only for empty placeholders.
 - Keep `.env`, keys, tokens, and credentials ignored.
-- Do not expose Telegram, SMTP, Netlify, or API credentials in docs or code.
-
