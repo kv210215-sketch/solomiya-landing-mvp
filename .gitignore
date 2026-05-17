@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.local
+dist/
+build/
+.cache/
+.DS_Store
+*.log
+backups/private/
+secrets/
+*.key
+*.pem
+*.zip
+*.rar
+.claude/settings.local.json
+.claude/worktrees/

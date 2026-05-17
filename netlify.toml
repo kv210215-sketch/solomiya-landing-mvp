@@ -1,0 +1,12 @@
+# Netlify config — pretty /api/lead path that routes to the function.
+# Functions directory must match the folder you put lead.js in.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/lead"
+  to = "/.netlify/functions/lead"
+  status = 200
+  force = true
