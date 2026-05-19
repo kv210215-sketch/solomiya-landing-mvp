@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Solomiya Energy — Deye High Voltage ESS · Commercial Proposal</title>
+<meta name="description" content="DEYE HIGH VOLTAGE ESS — 30 kW / 61.44 kWh Industrial Energy Storage Solution. Commercial proposal by Solomiya Energy." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================================
+   SOLOMIYA ENERGY  ·  DEYE HV ESS  ·  COMMERCIAL PROPOSAL
+   Luxury industrial proposal · A4 · PDF-ready
+   Reference register: Tesla Energy · Huawei FusionSolar · BYD · Schneider
+   ========================================================================= */
+
+:root{
+  --ink-0:      #050505;
+  --ink-1:      #0A0A0A;
+  --ink-2:      #0F0F0F;
+  --ink-3:      #141414;
+  --ink-4:      #1A1A1A;
+  --line:       #232323;
+  --line-2:     #2C2C2C;
+
+  --ivory:      #F4F1EA;
+  --ivory-2:    #E6E2D7;
+  --mute:       #908C84;
+  --mute-2:     #5F5C56;
+  --mute-3:     #3D3B36;
+
+  --gold:       #C9A961;
+  --gold-2:     #B89548;
+  --gold-soft:  #8B7A4A;
+  --gold-line:  rgba(201,169,97,.32);
+  --gold-line-2:rgba(201,169,97,.18);
+  --gold-glow:  rgba(201,169,97,.06);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{
+  background:#1c1c1c;
+  color:var(--ivory);
+  font-family:"Inter",-apple-system,system-ui,sans-serif;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:geometricPrecision;
+  font-feature-settings:"ss01","cv01","tnum";
+}
+
+/* -------------------------------------------------------------------------
+   A4 PAGE FRAME
+   ------------------------------------------------------------------------- */
+.page{
+  width:210mm;
+  height:297mm;
+  margin:14mm auto;
+  background:var(--ink-1);
+  color:var(--ivory);
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,.65),0 0 0 1px #000;
+  padding:24mm 22mm 22mm;
+  page-break-after:always;
+  break-after:page;
+}
+.page:last-of-type{page-break-after:auto;break-after:auto;margin-bottom:14mm}
+
+/* Corner gold L-marks */
+.page > .corner{
+  position:absolute;width:12mm;height:12mm;border:1px solid var(--gold);opacity:.55;pointer-events:none
+}
+.page > .corner.tl{top:9mm;left:9mm;border-right:none;border-bottom:none}
+.page > .corner.tr{top:9mm;right:9mm;border-left:none;border-bottom:none}
+.page > .corner.bl{bottom:9mm;left:9mm;border-right:none;border-top:none}
+.page > .corner.br{bottom:9mm;right:9mm;border-left:none;border-top:none}
+
+/* -------------------------------------------------------------------------
+   TYPOGRAPHY
+   ------------------------------------------------------------------------- */
+.serif{font-family:"Cormorant Garamond",serif;font-weight:400;letter-spacing:.005em}
+.ui   {font-family:"Inter",sans-serif;font-weight:300}
+
+.eyebrow{
+  font-family:"Inter",sans-serif;font-weight:400;
+  font-size:8pt;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);
+}
+.label{
+  font-family:"Inter",sans-serif;font-weight:400;
+  font-size:7pt;letter-spacing:.4em;text-transform:uppercase;color:var(--mute);
+}
+.label.gold{color:var(--gold)}
+
+.body  {font-size:10pt;line-height:1.75;color:var(--ivory-2);font-weight:300}
+.body.lg{font-size:11pt;line-height:1.7}
+.small {font-size:8pt;line-height:1.65;color:var(--mute);letter-spacing:.01em}
+
+.h1{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:34pt;line-height:1.05;letter-spacing:-.005em}
+.h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:24pt;line-height:1.1}
+.h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:14pt;letter-spacing:.005em}
+
+.gold{color:var(--gold)}
+.italic{font-style:italic}
+.center{text-align:center}
+
+/* -------------------------------------------------------------------------
+   PAGE HEADER / FOOTER
+   ------------------------------------------------------------------------- */
+.pg-header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:5mm;border-bottom:1px solid var(--gold-line);
+  margin-bottom:12mm;
+}
+.brand{display:flex;align-items:center;gap:9px}
+.brand-mark{
+  width:24px;height:24px;border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Cormorant Garamond",serif;color:var(--gold);
+  font-size:15pt;line-height:1;font-weight:400;
+}
+.brand-name{
+  font-family:"Cormorant Garamond",serif;font-weight:500;
+  font-size:12pt;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory);
+}
+.pg-ref{font-size:7pt;letter-spacing:.32em;text-transform:uppercase;color:var(--mute)}
+.pg-ref b{color:var(--gold);font-weight:400}
+
+.pg-footer{
+  position:absolute;bottom:14mm;left:22mm;right:22mm;
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:5mm;border-top:1px solid var(--gold-line);
+  font-size:7pt;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);
+}
+.pg-footer .pgno{color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:10pt;letter-spacing:.18em}
+
+/* -------------------------------------------------------------------------
+   SECTION TITLES
+   ------------------------------------------------------------------------- */
+.section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10mm}
+.section-head .no{
+  font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);
+  font-size:18pt;border-right:1px solid var(--gold-line);padding-right:14px;line-height:1;
+}
+.section-head h2{
+  font-family:"Cormorant Garamond",serif;font-weight:400;
+  font-size:28pt;line-height:1.05;letter-spacing:-.005em;
+}
+.section-head h2 em{font-style:italic;color:var(--gold);font-weight:400}
+
+.lede{
+  font-family:"Cormorant Garamond",serif;font-weight:300;font-style:italic;
+  font-size:15pt;line-height:1.55;color:var(--ivory);
+  border-left:1px solid var(--gold);padding-left:8mm;
+  margin:2mm 0 10mm;max-width:160mm;
+}
+
+/* =========================================================================
+   PAGE 1  ·  COVER
+   ========================================================================= */
+.cover{
+  padding:24mm 24mm;
+  background:
+    radial-gradient(900px 600px at 78% 22%, rgba(201,169,97,.10), transparent 62%),
+    radial-gradient(700px 500px at 18% 88%, rgba(201,169,97,.06), transparent 65%),
+    linear-gradient(180deg,#070707 0%,#0C0C0C 50%,#070707 100%);
+}
+.cover-grid{height:100%;display:grid;grid-template-rows:auto 1fr auto;gap:0}
+
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+.cover-brand{display:flex;align-items:flex-start;gap:14px}
+.cover-brand .mk{
+  width:48px;height:48px;border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:27pt;line-height:1;font-weight:400;
+}
+.cover-brand .nm{
+  font-family:"Cormorant Garamond",serif;font-weight:500;font-size:17pt;
+  letter-spacing:.22em;text-transform:uppercase;line-height:1.05;
+}
+.cover-brand .tg{
+  display:block;font-family:"Inter",sans-serif;font-size:7pt;
+  letter-spacing:.42em;color:var(--gold);margin-top:5px;text-transform:uppercase;
+}
+.cover-top .meta-r{text-align:right}
+.cover-top .meta-r .k{font-size:7pt;letter-spacing:.4em;text-transform:uppercase;color:var(--mute)}
+.cover-top .meta-r .v{font-family:"Cormorant Garamond",serif;font-size:12pt;color:var(--ivory);margin-top:3mm;line-height:1.3}
+
+.cover-center{
+  display:flex;flex-direction:column;justify-content:center;
+  padding-top:6mm;
+}
+.cover-eye{
+  font-size:8pt;letter-spacing:.55em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:14mm;display:flex;align-items:center;gap:14px;
+}
+.cover-eye::before{content:"";width:18mm;height:1px;background:var(--gold)}
+.cover-title{
+  font-family:"Cormorant Garamond",serif;font-weight:300;
+  font-size:64pt;line-height:.95;letter-spacing:-.015em;color:var(--ivory);
+}
+.cover-title .deye{display:block;font-weight:300}
+.cover-title .hv{display:block;font-style:italic;color:var(--gold);font-weight:400;margin-top:2mm}
+.cover-title .ess{display:block;font-weight:300;letter-spacing:.02em}
+
+.cover-sub{
+  margin-top:10mm;padding-top:8mm;border-top:1px solid var(--gold-line);
+  font-family:"Inter",sans-serif;font-weight:300;font-size:13pt;line-height:1.5;
+  color:var(--ivory-2);max-width:155mm;letter-spacing:.005em;
+}
+.cover-sub b{color:var(--gold);font-weight:400}
+
+.cover-stats{
+  margin-top:12mm;display:grid;grid-template-columns:repeat(4,1fr);gap:8mm;
+}
+.cover-stats .cell{padding-top:5mm;border-top:1px solid var(--gold-line)}
+.cover-stats .k{font-size:6.5pt;letter-spacing:.42em;text-transform:uppercase;color:var(--mute);margin-bottom:3mm}
+.cover-stats .v{font-family:"Cormorant Garamond",serif;font-size:18pt;color:var(--ivory);line-height:1.05;font-weight:400}
+.cover-stats .v small{font-size:10pt;color:var(--gold);margin-left:2px;letter-spacing:.05em}
+.cover-stats .v.gold{color:var(--gold)}
+
+.cover-bottom{
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8mm;align-items:end;
+  padding-top:8mm;border-top:1px solid var(--gold-line);
+}
+.cover-bottom .lbl{font-size:6.5pt;letter-spacing:.4em;text-transform:uppercase;color:var(--mute);margin-bottom:3mm}
+.cover-bottom .val{font-family:"Cormorant Garamond",serif;font-size:13pt;line-height:1.35;color:var(--ivory)}
+.cover-bottom .val a{color:var(--gold);text-decoration:none}
+.cover-bottom .val .ln{display:block;font-size:10.5pt;color:var(--mute);margin-top:1.5mm;font-family:"Inter",sans-serif;font-weight:300;letter-spacing:.02em}
+.cover-bottom .r{text-align:right}
+
+/* =========================================================================
+   PAGE 2  ·  EXECUTIVE SUMMARY
+   ========================================================================= */
+.kpi-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  margin-top:8mm;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold-line);
+}
+.kpi-row .kpi{
+  padding:7mm 5mm;border-right:1px solid var(--line);
+  display:flex;flex-direction:column;
+}
+.kpi-row .kpi:last-child{border-right:none}
+.kpi-row .k{font-size:6.5pt;letter-spacing:.42em;text-transform:uppercase;color:var(--mute);margin-bottom:5mm}
+.kpi-row .v{font-family:"Cormorant Garamond",serif;font-size:30pt;color:var(--ivory);line-height:1;font-weight:400}
+.kpi-row .v small{font-size:11pt;color:var(--gold);margin-left:3px;letter-spacing:.04em;font-weight:400}
+.kpi-row .v.gold{color:var(--gold)}
+.kpi-row .desc{font-size:8pt;line-height:1.5;color:var(--mute);margin-top:5mm;letter-spacing:.01em}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14mm}
+
+.ornament{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  color:var(--gold);margin:10mm 0;
+  font-family:"Inter",sans-serif;font-size:8pt;letter-spacing:.5em;text-transform:uppercase;
+}
+.ornament::before,.ornament::after{content:"";flex:1;height:1px;background:var(--gold-line);max-width:55mm}
+.ornament .dot{width:5px;height:5px;background:var(--gold);border-radius:50%;display:inline-block}
+
+/* =========================================================================
+   PAGE 3  ·  EQUIPMENT TABLE
+   ========================================================================= */
+.bom-frame{
+  margin-top:4mm;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+}
+.bom{width:100%;border-collapse:collapse}
+.bom thead th{
+  text-align:left;font-family:"Inter",sans-serif;font-weight:500;
+  font-size:7pt;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);
+  padding:6mm 4mm 5mm;border-bottom:1px solid var(--gold-line);
+}
+.bom thead th.r{text-align:right}
+.bom tbody td{
+  padding:7mm 4mm;border-bottom:1px solid var(--line);vertical-align:top;
+}
+.bom tbody tr:last-child td{border-bottom:none}
+.bom .idx{
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;
+  color:var(--gold-soft);font-size:13pt;width:14mm;
+}
+.bom .name{
+  font-family:"Cormorant Garamond",serif;font-size:14pt;color:var(--ivory);
+  font-weight:500;letter-spacing:.005em;line-height:1.2;
+}
+.bom .sku{
+  display:block;margin-top:2mm;font-family:"Inter",sans-serif;font-weight:400;
+  font-size:7pt;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);
+}
+.bom .qty{
+  font-family:"Cormorant Garamond",serif;font-size:14pt;color:var(--gold);
+  text-align:right;width:18mm;font-feature-settings:"tnum";
+}
+.bom .unit{
+  font-family:"Cormorant Garamond",serif;font-size:13pt;color:var(--ivory-2);
+  text-align:right;width:30mm;font-feature-settings:"tnum";font-weight:400;
+}
+.bom .sum{
+  font-family:"Cormorant Garamond",serif;font-size:14pt;color:var(--gold);
+  text-align:right;width:32mm;font-feature-settings:"tnum";font-weight:500;
+}
+
+.bom-summary{
+  margin-top:0;display:grid;grid-template-columns:1fr 78mm;gap:0;
+}
+.bom-summary .ln{
+  padding:7mm 4mm;font-size:8.5pt;line-height:1.65;color:var(--mute);
+  border-right:1px solid var(--line);
+}
+.bom-summary .ln .lbl{display:block;font-size:6.5pt;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:3mm}
+.bom-summary .ttls{padding:7mm 4mm}
+.bom-summary .ttls .row{display:flex;justify-content:space-between;align-items:baseline;padding:2mm 0}
+.bom-summary .ttls .row .k{font-size:7pt;letter-spacing:.32em;text-transform:uppercase;color:var(--mute)}
+.bom-summary .ttls .row .v{font-family:"Cormorant Garamond",serif;font-size:13pt;color:var(--ivory)}
+.bom-summary .ttls .grand{
+  margin-top:4mm;padding-top:5mm;border-top:1px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.bom-summary .ttls .grand .k{font-size:8pt;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.bom-summary .ttls .grand .v{font-family:"Cormorant Garamond",serif;font-size:28pt;color:var(--gold);font-weight:400;line-height:1}
+
+/* =========================================================================
+   PAGE 4  ·  TECHNICAL SPECIFICATIONS
+   ========================================================================= */
+.spec-frame{
+  border-top:1px solid var(--gold);border-bottom:1px solid var(--gold-line);
+}
+.spec-list{display:grid;grid-template-columns:1fr 1fr}
+.spec-list .row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:6mm 0;border-bottom:1px solid var(--line);
+}
+.spec-list .row:nth-child(odd){padding-right:8mm}
+.spec-list .row:nth-child(even){padding-left:8mm;border-left:1px solid var(--line)}
+.spec-list .row:nth-last-child(-n+2){border-bottom:none}
+.spec-list .k{font-size:8pt;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);font-weight:400}
+.spec-list .v{font-family:"Cormorant Garamond",serif;font-size:14pt;color:var(--ivory);font-weight:400;text-align:right}
+.spec-list .v em{color:var(--gold);font-style:normal;font-weight:500}
+
+.cert-row{display:flex;flex-wrap:wrap;gap:5mm;margin-top:10mm}
+.cert{
+  border:1px solid var(--gold-line);
+  font-size:7.5pt;letter-spacing:.28em;text-transform:uppercase;
+  padding:2.5mm 5mm;color:var(--ivory-2);font-weight:400;
+}
+.cert.solid{background:var(--gold-glow);border-color:var(--gold);color:var(--gold)}
+
+/* =========================================================================
+   PAGE 5  ·  PREMIUM ADVANTAGES (5 sections w/ SVG icons)
+   ========================================================================= */
+.adv-list{
+  border-top:1px solid var(--gold);
+}
+.adv-row{
+  display:grid;grid-template-columns:22mm 1fr 50mm;gap:8mm;
+  padding:8mm 0;border-bottom:1px solid var(--line);
+  align-items:center;
+  page-break-inside:avoid;break-inside:avoid;
+}
+.adv-row:last-child{border-bottom:1px solid var(--gold-line)}
+.adv-icon{
+  width:54px;height:54px;border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);
+}
+.adv-icon svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+.adv-body h4{
+  font-family:"Cormorant Garamond",serif;font-weight:500;font-size:15pt;
+  letter-spacing:.005em;margin-bottom:2.5mm;color:var(--ivory);
+}
+.adv-body p{font-size:9.5pt;line-height:1.6;color:var(--mute);max-width:110mm}
+.adv-tag{
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-size:12pt;
+  color:var(--gold);text-align:right;letter-spacing:.005em;line-height:1.3;
+}
+.adv-tag em{display:block;font-style:normal;font-family:"Inter",sans-serif;font-size:7pt;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin-top:2mm}
+
+/* =========================================================================
+   PAGE 6  ·  TOTAL + SIGNATURE
+   ========================================================================= */
+.total-card{
+  margin-top:6mm;
+  position:relative;
+  background:
+    radial-gradient(700px 360px at 82% 18%, rgba(201,169,97,.10), transparent 65%),
+    linear-gradient(180deg,#121212 0%,#0C0C0C 100%);
+  border:1px solid var(--gold);
+  padding:18mm 16mm 14mm;
+  page-break-inside:avoid;break-inside:avoid;
+}
+.total-card::before{
+  content:"";position:absolute;inset:5mm;
+  border:1px solid var(--gold-line);pointer-events:none;
+}
+.total-card .ribbon{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:8mm;
+  position:relative;z-index:1;
+}
+.total-card .ribbon .lbl{font-size:7.5pt;letter-spacing:.55em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.total-card .ribbon .ref{font-family:"Cormorant Garamond",serif;font-size:11pt;color:var(--mute);font-style:italic}
+
+.total-amount{
+  position:relative;z-index:1;
+  display:flex;align-items:baseline;justify-content:flex-start;gap:4mm;
+}
+.total-amount .cur{
+  font-family:"Cormorant Garamond",serif;font-weight:400;
+  font-size:48pt;color:var(--gold);line-height:1;
+}
+.total-amount .val{
+  font-family:"Cormorant Garamond",serif;font-weight:300;
+  font-size:104pt;color:var(--ivory);line-height:.95;letter-spacing:-.02em;
+}
+.total-amount .iso{
+  font-family:"Inter",sans-serif;font-weight:300;
+  font-size:14pt;color:var(--gold);letter-spacing:.32em;margin-left:6mm;align-self:flex-end;margin-bottom:6mm;
+}
+.total-incl{
+  margin-top:10mm;padding-top:6mm;border-top:1px solid var(--gold-line);
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 1fr;gap:8mm;
+}
+.total-incl .it{display:flex;align-items:flex-start;gap:5mm}
+.total-incl .it .mk{
+  width:22px;height:22px;border:1px solid var(--gold);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:"Cormorant Garamond",serif;font-size:11pt;line-height:1;
+}
+.total-incl .it .tx{font-size:9pt;line-height:1.55;color:var(--ivory-2)}
+.total-incl .it .tx b{color:var(--gold);font-weight:400;display:block;font-size:8pt;letter-spacing:.32em;text-transform:uppercase;margin-bottom:1.5mm}
+
+.terms{
+  margin-top:10mm;display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--gold-line);
+}
+.terms .it{padding:6mm 5mm;border-right:1px solid var(--line)}
+.terms .it:last-child{border-right:none}
+.terms .it .lbl{font-size:6.5pt;letter-spacing:.42em;text-transform:uppercase;color:var(--mute);margin-bottom:3mm}
+.terms .it .vl{font-family:"Cormorant Garamond",serif;font-size:18pt;color:var(--ivory);line-height:1.1}
+.terms .it .vl small{font-size:9pt;color:var(--gold);margin-left:2px;letter-spacing:.04em}
+.terms .it .dc{font-size:7.5pt;color:var(--mute);margin-top:2mm;line-height:1.5}
+
+.sign-row{display:grid;grid-template-columns:1fr 1fr;gap:14mm;margin-top:12mm}
+.sign{padding-top:4mm}
+.sign .lbl{font-size:6.5pt;letter-spacing:.4em;text-transform:uppercase;color:var(--mute);margin-bottom:3mm}
+.sign .ln{height:1px;background:var(--gold-line);margin-top:12mm;margin-bottom:3mm}
+.sign .nm{font-family:"Cormorant Garamond",serif;font-size:13pt;color:var(--ivory)}
+.sign .rl{font-size:8pt;letter-spacing:.18em;color:var(--mute);text-transform:uppercase;margin-top:1.5mm}
+
+/* =========================================================================
+   PREMIUM CORPORATE FOOTER (final page)
+   ========================================================================= */
+.corp-footer{
+  position:absolute;left:22mm;right:22mm;bottom:16mm;
+}
+.corp-footer .gold-line{height:1px;background:linear-gradient(90deg,transparent 0,var(--gold) 18%,var(--gold) 82%,transparent 100%)}
+.corp-footer .grid{
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8mm;
+  padding-top:6mm;
+}
+.corp-footer .lbl{font-size:6.5pt;letter-spacing:.4em;text-transform:uppercase;color:var(--mute);margin-bottom:2mm}
+.corp-footer .v1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:13pt;color:var(--ivory);letter-spacing:.06em}
+.corp-footer .v2{font-family:"Inter",sans-serif;font-size:8.5pt;color:var(--mute);margin-top:1.5mm;letter-spacing:.02em;line-height:1.5}
+.corp-footer .r{text-align:right}
+.corp-footer .tag{
+  margin-top:4mm;font-size:7pt;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--gold);text-align:center;font-weight:400;
+}
+
+/* =========================================================================
+   PRINT
+   ========================================================================= */
+@page{size:A4;margin:0}
+@media print{
+  html,body{background:#fff}
+  .page{margin:0;box-shadow:none;break-after:page;page-break-after:always}
+  .page:last-of-type{margin:0;page-break-after:auto;break-after:auto}
+  .total-card,.adv-row,.kpi-row,.spec-list{page-break-inside:avoid;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- =========================================================================
+     PAGE 1  ·  COVER
+     ========================================================================= -->
+<section class="page cover">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+
+  <div class="cover-grid">
+
+    <div class="cover-top">
+      <div class="cover-brand">
+        <div class="mk">S</div>
+        <div>
+          <div class="nm">Solomiya<br/>Energy</div>
+          <span class="tg">Engineering &middot; ESS &middot; Solar</span>
+        </div>
+      </div>
+      <div class="meta-r">
+        <div class="k">Document</div>
+        <div class="v">№&nbsp;SE&middot;2026&middot;ESS&middot;017</div>
+        <div class="k" style="margin-top:6mm">Issued</div>
+        <div class="v">19 May 2026</div>
+      </div>
+    </div>
+
+    <div class="cover-center">
+      <div class="cover-eye">Commercial Proposal &middot; Industrial Energy Storage</div>
+
+      <h1 class="cover-title">
+        <span class="deye">DEYE</span>
+        <span class="hv">High&nbsp;Voltage</span>
+        <span class="ess">ESS</span>
+      </h1>
+
+      <p class="cover-sub">
+        <b>30&nbsp;kW / 61.44&nbsp;kWh</b> Industrial Energy Storage Solution &mdash;
+        a three-phase High&nbsp;Voltage LiFePO<sub>4</sub> platform engineered for
+        production facilities, agricultural operations and critical-load infrastructure.
+      </p>
+
+      <div class="cover-stats">
+        <div class="cell">
+          <div class="k">Power</div>
+          <div class="v">30 <small>kW</small></div>
+        </div>
+        <div class="cell">
+          <div class="k">Capacity</div>
+          <div class="v">61.44 <small>kWh</small></div>
+        </div>
+        <div class="cell">
+          <div class="k">Architecture</div>
+          <div class="v">HV&nbsp;·&nbsp;3Φ</div>
+        </div>
+        <div class="cell">
+          <div class="k">Investment</div>
+          <div class="v gold">13&thinsp;060 <small>USD</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-bottom">
+      <div>
+        <div class="lbl">Prepared&nbsp;for</div>
+        <div class="val">Володимир<span class="ln">м. Берестин &middot; Ukraine</span></div>
+      </div>
+      <div>
+        <div class="lbl">Issued&nbsp;by</div>
+        <div class="val">Юзич Андрій<span class="ln">Solomiya Energy &middot; Founder</span></div>
+      </div>
+      <div class="r">
+        <div class="lbl">Contact</div>
+        <div class="val">
+          <a href="tel:+380675554000">+380&nbsp;67&nbsp;555&nbsp;4000</a>
+          <span class="ln"><a href="mailto:andriy555solar@gmail.com" style="color:var(--gold)">andriy555solar@gmail.com</a></span>
+          <span class="ln"><a href="https://www.solomiya-energy.com" style="color:var(--gold)">www.solomiya-energy.com</a></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================================
+     PAGE 2  ·  EXECUTIVE SUMMARY
+     ========================================================================= -->
+<section class="page">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+
+  <header class="pg-header">
+    <div class="brand"><div class="brand-mark">S</div><div class="brand-name">Solomiya Energy</div></div>
+    <div class="pg-ref">Proposal&nbsp;&nbsp;<b>№ SE·2026·ESS·017</b></div>
+  </header>
+
+  <div class="eyebrow">I &middot; Executive Summary</div>
+  <div class="section-head">
+    <span class="no">01</span>
+    <h2>Industrial Energy<br/>Storage <em>Solution</em></h2>
+  </div>
+
+  <p class="lede">
+    Корпоративний клас зберігання енергії — для виробництв, ферм та об'єктів,
+    де простій недопустимий, а кожна кіловат-година має ціну.
+  </p>
+
+  <div class="two-col">
+    <div>
+      <div class="label gold" style="margin-bottom:5mm">Концепція</div>
+      <p class="body">
+        Готова промислова платформа High&nbsp;Voltage&nbsp;ESS на базі гібридного інвертора
+        <b class="gold">Deye SUN&#8209;30K&#8209;SG02HP3</b> та літій&#8209;залізо&#8209;фосфатних модулів
+        <b class="gold">Deye BOS&#8209;G</b>. Конфігурація 30&nbsp;кВт / 61.44&nbsp;кВт&middot;год
+        створена для трифазних об'єктів із комбінованим живленням:
+        мережа · СЕС · генератор · накопичувач.
+      </p>
+    </div>
+    <div>
+      <div class="label gold" style="margin-bottom:5mm">Призначення</div>
+      <p class="body">
+        Безперервне живлення критичного навантаження, peak&nbsp;shaving,
+        оптимізація тарифної моделі, інтеграція із сонячною електростанцією
+        та підготовка до зовнішнього EMS-контуру. Архітектура дозволяє
+        нарощувати ємність без заміни базових компонентів.
+      </p>
+    </div>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi">
+      <div class="k">Power</div>
+      <div class="v">30 <small>kW</small></div>
+      <div class="desc">Номінальна вихідна потужність, 3Φ симетрія, чистий синус, низький THD.</div>
+    </div>
+    <div class="kpi">
+      <div class="k">Capacity</div>
+      <div class="v">61.44 <small>kWh</small></div>
+      <div class="desc">12&nbsp;× LiFePO<sub>4</sub> Deye BOS&#8209;G 5.1. Ресурс &gt;&thinsp;6&thinsp;000 циклів.</div>
+    </div>
+    <div class="kpi">
+      <div class="k">Topology</div>
+      <div class="v gold">HV · 3Φ</div>
+      <div class="desc">High Voltage шина АКБ — вищий ККД, менші струми, менші втрати.</div>
+    </div>
+    <div class="kpi">
+      <div class="k">Investment</div>
+      <div class="v gold">13&thinsp;060 <small>USD</small></div>
+      <div class="desc">Загальна вартість обладнання преміальної серії Deye.</div>
+    </div>
+  </div>
+
+  <div class="ornament"><span class="dot"></span>Solomiya Energy<span class="dot"></span></div>
+
+  <p class="body" style="max-width:165mm;color:var(--mute);margin-top:4mm">
+    Усі компоненти платформи постачаються офіційним каналом із заводською гарантією виробника.
+    Конфігурація рекомендована для об'єктів із трифазним 380&nbsp;V навантаженням до 30&nbsp;кВт
+    та потребою в автономії від 1 до 3 годин на критичному навантаженні.
+  </p>
+
+  <div class="pg-footer">
+    <span>Solomiya Energy &middot; Engineering · Energy Storage · Solar Solutions</span>
+    <span class="pgno">02&nbsp;/&nbsp;06</span>
+  </div>
+</section>
+
+<!-- =========================================================================
+     PAGE 3  ·  EQUIPMENT COMPOSITION  ·  BOM
+     ========================================================================= -->
+<section class="page">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+
+  <header class="pg-header">
+    <div class="brand"><div class="brand-mark">S</div><div class="brand-name">Solomiya Energy</div></div>
+    <div class="pg-ref">Proposal&nbsp;&nbsp;<b>№ SE·2026·ESS·017</b></div>
+  </header>
+
+  <div class="eyebrow">II &middot; Equipment &middot; Bill of Materials</div>
+  <div class="section-head">
+    <span class="no">02</span>
+    <h2>Склад <em>обладнання</em></h2>
+  </div>
+
+  <p class="body" style="max-width:165mm;color:var(--mute);margin-bottom:8mm">
+    Перелік основного обладнання преміальної серії Deye, що формує промисловий
+    енергетичний контур замовника. Усі компоненти — оригінальне постачання,
+    із заводською гарантією виробника.
+  </p>
+
+  <div class="bom-frame">
+    <table class="bom">
+      <thead>
+        <tr>
+          <th style="width:14mm">№</th>
+          <th>Компонент</th>
+          <th class="r">Qty</th>
+          <th class="r">Unit, USD</th>
+          <th class="r">Sum, USD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="idx">I</td>
+          <td>
+            <span class="name">Гібридний інвертор Deye</span>
+            <span class="sku">SUN&#8209;30K&#8209;SG02HP3&#8209;EU&#8209;AM3 · 30&nbsp;kW · 3Φ · High Voltage</span>
+          </td>
+          <td class="qty">1</td>
+          <td class="unit">2&thinsp;600</td>
+          <td class="sum">2&thinsp;600</td>
+        </tr>
+        <tr>
+          <td class="idx">II</td>
+          <td>
+            <span class="name">Акумуляторний модуль LiFePO<sub>4</sub></span>
+            <span class="sku">Deye BOS&#8209;G&#8209;Pack 5.1 · 5.12&nbsp;kWh · HV Stack</span>
+          </td>
+          <td class="qty">12</td>
+          <td class="unit">780</td>
+          <td class="sum">9&thinsp;360</td>
+        </tr>
+        <tr>
+          <td class="idx">III</td>
+          <td>
+            <span class="name">Блок управління батареєю</span>
+            <span class="sku">Deye BOS&#8209;G&#8209;PDU&#8209;2 Pro · Smart BMS · PDU</span>
+          </td>
+          <td class="qty">1</td>
+          <td class="unit">750</td>
+          <td class="sum">750</td>
+        </tr>
+        <tr>
+          <td class="idx">IV</td>
+          <td>
+            <span class="name">Серверна стійка</span>
+            <span class="sku">3U&#8209;HRack · Industrial-grade enclosure</span>
+          </td>
+          <td class="qty">1</td>
+          <td class="unit">350</td>
+          <td class="sum">350</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bom-summary">
+    <div class="ln">
+      <span class="lbl">Notes</span>
+      Вартість зазначена у доларах США та не включає монтажні роботи,
+      кабельну продукцію та логістику. Можлива оплата у гривні
+      за внутрішнім курсом компанії на день виставлення рахунку.
+      Ціна дійсна 14 календарних днів від дати випуску документу.
+    </div>
+    <div class="ttls">
+      <div class="row"><span class="k">Обладнання</span><span class="v">13&thinsp;060&nbsp;USD</span></div>
+      <div class="row"><span class="k">Знижка</span><span class="v">— —</span></div>
+      <div class="row"><span class="k">ПДВ</span><span class="v">включено</span></div>
+      <div class="grand">
+        <span class="k">Total</span>
+        <span class="v">13&thinsp;060&nbsp;<span style="font-size:16pt">$</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-footer">
+    <span>Solomiya Energy &middot; +380 67 555 4000</span>
+    <span class="pgno">03&nbsp;/&nbsp;06</span>
+  </div>
+</section>
+
+<!-- =========================================================================
+     PAGE 4  ·  TECHNICAL SPECIFICATIONS
+     ========================================================================= -->
+<section class="page">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+
+  <header class="pg-header">
+    <div class="brand"><div class="brand-mark">S</div><div class="brand-name">Solomiya Energy</div></div>
+    <div class="pg-ref">Proposal&nbsp;&nbsp;<b>№ SE·2026·ESS·017</b></div>
+  </header>
+
+  <div class="eyebrow">III &middot; Technical Specifications</div>
+  <div class="section-head">
+    <span class="no">03</span>
+    <h2>Параметри <em>системи</em></h2>
+  </div>
+
+  <p class="body" style="max-width:165mm;color:var(--mute);margin-bottom:8mm">
+    Технічна конфігурація рішення Deye High&nbsp;Voltage&nbsp;ESS. Всі параметри
+    відповідають заводським даним виробника та умовам експлуатації EN&#8209;50549.
+  </p>
+
+  <div class="spec-frame">
+    <div class="spec-list">
+      <div class="row"><span class="k">Потужність системи</span><span class="v"><em>30</em> кВт</span></div>
+      <div class="row"><span class="k">Ємність АКБ</span><span class="v"><em>61.44</em> кВт·год</span></div>
+
+      <div class="row"><span class="k">Тип акумуляторів</span><span class="v">LiFePO<sub>4</sub></span></div>
+      <div class="row"><span class="k">Архітектура</span><span class="v">High Voltage ESS</span></div>
+
+      <div class="row"><span class="k">Кількість фаз</span><span class="v">3&nbsp;фази</span></div>
+      <div class="row"><span class="k">Напруга мережі</span><span class="v">380&nbsp;V&nbsp;AC</span></div>
+
+      <div class="row"><span class="k">Підтримка генератора</span><span class="v">Так</span></div>
+      <div class="row"><span class="k">Резервне живлення</span><span class="v">UPS&#8209;функція</span></div>
+
+      <div class="row"><span class="k">Інтеграція з СЕС</span><span class="v">Hybrid PV ready</span></div>
+      <div class="row"><span class="k">Управління</span><span class="v">EMS&nbsp;ready</span></div>
+
+      <div class="row"><span class="k">Моніторинг</span><span class="v">Wi&#8209;Fi · Cloud</span></div>
+      <div class="row"><span class="k">Протоколи</span><span class="v">CAN · RS485 · Modbus</span></div>
+
+      <div class="row"><span class="k">ККД інвертора</span><span class="v"><em>97</em> %</span></div>
+      <div class="row"><span class="k">Час перемикання</span><span class="v">&lt;&nbsp;20&nbsp;мс</span></div>
+
+      <div class="row"><span class="k">Ресурс батареї</span><span class="v">&gt;&nbsp;6&thinsp;000 циклів</span></div>
+      <div class="row"><span class="k">Робоча температура</span><span class="v">&minus;20…+55&nbsp;°C</span></div>
+    </div>
+  </div>
+
+  <div class="cert-row">
+    <span class="cert solid">LiFePO₄ Cell</span>
+    <span class="cert">IP65 Modules</span>
+    <span class="cert">Smart BMS</span>
+    <span class="cert">Black Start</span>
+    <span class="cert">Anti-Backflow</span>
+    <span class="cert">CE · IEC · EN-50549</span>
+  </div>
+
+  <div class="ornament" style="margin-top:14mm"><span class="dot"></span>Premium Industrial Grade<span class="dot"></span></div>
+
+  <p class="body" style="max-width:165mm;color:var(--mute)">
+    Платформа спроєктована як модульна: до 12 батарейних модулів на одну стійку,
+    до 4 стійок паралельно. Максимальна конфігурація однієї системи —
+    245&nbsp;кВт&middot;год при тій&nbsp;же базі інвертора, що дозволяє масштабувати
+    рішення без капітальної заміни обладнання.
+  </p>
+
+  <div class="pg-footer">
+    <span>Solomiya Energy &middot; andriy555solar@gmail.com</span>
+    <span class="pgno">04&nbsp;/&nbsp;06</span>
+  </div>
+</section>
+
+<!-- =========================================================================
+     PAGE 5  ·  SYSTEM ADVANTAGES
+     ========================================================================= -->
+<section class="page">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+
+  <header class="pg-header">
+    <div class="brand"><div class="brand-mark">S</div><div class="brand-name">Solomiya Energy</div></div>
+    <div class="pg-ref">Proposal&nbsp;&nbsp;<b>№ SE·2026·ESS·017</b></div>
+  </header>
+
+  <div class="eyebrow">IV &middot; Why this solution</div>
+  <div class="section-head">
+    <span class="no">04</span>
+    <h2>System <em>Advantages</em></h2>
+  </div>
+
+  <div class="adv-list">
+
+    <!-- 01  System Advantages / Industrial reliability -->
+    <div class="adv-row">
+      <div class="adv-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M6 28V12l10-6 10 6v16"/><path d="M11 28v-8h10v8"/><path d="M16 14v2M16 18v2"/></svg>
+      </div>
+      <div class="adv-body">
+        <h4>System Advantages</h4>
+        <p>Промисловий клас надійності: компоненти Deye серії BOS&#8209;G з ресурсом
+        &gt;&thinsp;6&thinsp;000 циклів, робочий діапазон &minus;20…+55&nbsp;°C та
+        повне резервування критичних вузлів. Архітектура заточена під 24/7 експлуатацію.</p>
+      </div>
+      <div class="adv-tag">&gt;&nbsp;6&thinsp;000 циклів<em>заявлений ресурс</em></div>
+    </div>
+
+    <!-- 02  Energy Independence -->
+    <div class="adv-row">
+      <div class="adv-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 3v3M16 26v3M3 16h3M26 16h3M6.5 6.5l2.1 2.1M23.4 23.4l2.1 2.1M6.5 25.5l2.1-2.1M23.4 8.6l2.1-2.1"/></svg>
+      </div>
+      <div class="adv-body">
+        <h4>Energy Independence</h4>
+        <p>Гібрид із СЕС, мережею та генератором з автоматичним пріоритетом джерел:
+        PV → батарея → мережа → генератор. Безшовне перемикання &lt;&thinsp;20&nbsp;мс
+        гарантує безперервне живлення критичного навантаження.</p>
+      </div>
+      <div class="adv-tag">&lt;&nbsp;20&nbsp;мс<em>switchover time</em></div>
+    </div>
+
+    <!-- 03  Scalability -->
+    <div class="adv-row">
+      <div class="adv-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><rect x="5" y="20" width="22" height="6"/><rect x="5" y="13" width="22" height="6"/><rect x="5" y="6" width="22" height="6"/><path d="M9 9h2M9 16h2M9 23h2"/></svg>
+      </div>
+      <div class="adv-body">
+        <h4>Scalability</h4>
+        <p>Модульна архітектура High Voltage: до 4 стійок паралельно, до
+        <b style="color:var(--ivory)">245&nbsp;кВт&middot;год</b> у максимальній конфігурації
+        на одній базі інвертора. Ємність нарощується без капітальної заміни обладнання.</p>
+      </div>
+      <div class="adv-tag">до 245 кВт·год<em>scalable capacity</em></div>
+    </div>
+
+    <!-- 04  Remote Monitoring -->
+    <div class="adv-row">
+      <div class="adv-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M8 22a6 6 0 1 1 1.2-11.9A8 8 0 0 1 24 13a5 5 0 0 1-1 9.9z"/><path d="M14 18l2 2 4-4"/></svg>
+      </div>
+      <div class="adv-body">
+        <h4>Remote Monitoring</h4>
+        <p>Cloud&#8209;диспетчеризація 24/7: Wi&#8209;Fi · Ethernet · 4G, інтеграція в зовнішні
+        EMS/SCADA через CAN · RS485 · Modbus. Прозора аналітика генерації, споживання
+        та стану кожного батарейного модуля у реальному часі.</p>
+      </div>
+      <div class="adv-tag">EMS · SCADA ready<em>open protocols</em></div>
+    </div>
+
+    <!-- 05  LiFePO4 Safety Technology -->
+    <div class="adv-row">
+      <div class="adv-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 4l10 4v8c0 6-4.5 11-10 12-5.5-1-10-6-10-12V8z"/><path d="M12 16l3 3 5-6"/></svg>
+      </div>
+      <div class="adv-body">
+        <h4>LiFePO<sub>4</sub> Safety Technology</h4>
+        <p>Літій&#8209;залізо&#8209;фосфатна хімія — інгерентно безпечна: відсутність
+        теплового розгону, термостабільність, низький саморозряд. Smart BMS контролює
+        температуру, напругу та струм кожної комірки із подвійним рівнем захисту.</p>
+      </div>
+      <div class="adv-tag">Intrinsic safety<em>thermal&#8209;stable chemistry</em></div>
+    </div>
+
+  </div>
+
+  <div class="pg-footer">
+    <span>Solomiya Energy &middot; Engineering · Energy Storage · Solar Solutions</span>
+    <span class="pgno">05&nbsp;/&nbsp;06</span>
+  </div>
+</section>
+
+<!-- =========================================================================
+     PAGE 6  ·  TOTAL  +  SIGNATURE  +  CORPORATE FOOTER
+     ========================================================================= -->
+<section class="page">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+
+  <header class="pg-header">
+    <div class="brand"><div class="brand-mark">S</div><div class="brand-name">Solomiya Energy</div></div>
+    <div class="pg-ref">Proposal&nbsp;&nbsp;<b>№ SE·2026·ESS·017</b></div>
+  </header>
+
+  <div class="eyebrow">V &middot; Investment</div>
+  <div class="section-head">
+    <span class="no">05</span>
+    <h2>Інвестиція в <em>енергонезалежність</em></h2>
+  </div>
+
+  <div class="total-card">
+    <div class="ribbon">
+      <span class="lbl">Total Investment</span>
+      <span class="ref">Deye HV ESS · 30&nbsp;kW / 61.44&nbsp;kWh</span>
+    </div>
+
+    <div class="total-amount">
+      <span class="cur">$</span>
+      <span class="val">13&thinsp;060</span>
+      <span class="iso">USD</span>
+    </div>
+
+    <div class="total-incl">
+      <div class="it">
+        <div class="mk">I</div>
+        <div class="tx"><b>Inverter</b>Deye SUN&#8209;30K&#8209;SG02HP3&#8209;EU&#8209;AM3, 30&nbsp;kW · 3Φ · HV</div>
+      </div>
+      <div class="it">
+        <div class="mk">II</div>
+        <div class="tx"><b>Battery Stack</b>12&nbsp;× Deye BOS&#8209;G Pack 5.1 · 61.44&nbsp;kWh LiFePO<sub>4</sub></div>
+      </div>
+      <div class="it">
+        <div class="mk">III</div>
+        <div class="tx"><b>Control Unit</b>Deye BOS&#8209;G&#8209;PDU&#8209;2 Pro · Smart BMS · PDU</div>
+      </div>
+      <div class="it">
+        <div class="mk">IV</div>
+        <div class="tx"><b>Enclosure</b>3U&#8209;HRack · промислове виконання</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="terms">
+    <div class="it">
+      <div class="lbl">Передоплата</div>
+      <div class="vl">50<small>%</small></div>
+      <div class="dc">резервування обладнання</div>
+    </div>
+    <div class="it">
+      <div class="lbl">Постачання</div>
+      <div class="vl">10–14<small>днів</small></div>
+      <div class="dc">від моменту резерву</div>
+    </div>
+    <div class="it">
+      <div class="lbl">Гарантія</div>
+      <div class="vl">до&nbsp;10<small>років</small></div>
+      <div class="dc">офіційна гарантія Deye</div>
+    </div>
+  </div>
+
+  <div class="sign-row">
+    <div class="sign">
+      <div class="lbl">Від виконавця</div>
+      <div class="ln"></div>
+      <div class="nm">Юзич Андрій</div>
+      <div class="rl">Solomiya Energy &middot; Founder</div>
+    </div>
+    <div class="sign">
+      <div class="lbl">Від замовника</div>
+      <div class="ln"></div>
+      <div class="nm">Володимир</div>
+      <div class="rl">м.&nbsp;Берестин</div>
+    </div>
+  </div>
+
+  <!-- Premium corporate footer -->
+  <div class="corp-footer">
+    <div class="gold-line"></div>
+    <div class="grid">
+      <div>
+        <div class="lbl">Company</div>
+        <div class="v1">Solomiya Energy</div>
+        <div class="v2">м. Львів, вул. Стрийська, 45<br/>Ukraine</div>
+      </div>
+      <div>
+        <div class="lbl">Contact</div>
+        <div class="v1">+380 67 555 4000</div>
+        <div class="v2">andriy555solar@gmail.com</div>
+      </div>
+      <div class="r">
+        <div class="lbl">Web</div>
+        <div class="v1" style="color:var(--gold)">www.solomiya&#8209;energy.com</div>
+        <div class="v2">Engineering &middot; ESS &middot; Solar</div>
+      </div>
+    </div>
+    <div class="tag">Solomiya Energy &nbsp;·&nbsp; Engineering &nbsp;·&nbsp; Energy Storage &nbsp;·&nbsp; Solar Solutions</div>
+  </div>
+
+</section>
+
+</body>
+</html>
