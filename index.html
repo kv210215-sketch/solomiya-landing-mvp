@@ -269,6 +269,38 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .review-meta{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg-mute)}
 @media(max-width:900px){.reviews-grid{grid-template-columns:1fr}}
 
+/* ── PROJECTS / CASES ─────────────────────────────────────────────────────── */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.project-card{position:relative;background:var(--bg-2);overflow:hidden;cursor:pointer;display:block;border:0;padding:0;font:inherit;color:inherit;text-align:left;width:100%;transition:background .2s}
+.project-card:hover{background:var(--bg-3)}
+.project-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg-3)}
+.project-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease-out)}
+.project-card:hover .project-media img{transform:scale(1.04)}
+.project-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0) 40%,rgba(10,10,10,0.55) 75%,rgba(10,10,10,0.92) 100%);pointer-events:none;transition:opacity .3s}
+.project-info{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;z-index:2;color:var(--fg);transform:translateY(6px);transition:transform .35s var(--ease-out)}
+.project-card:hover .project-info{transform:translateY(0)}
+.project-type{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
+.project-title{font-family:var(--serif);font-size:22px;line-height:1.15;margin-bottom:5px;color:var(--fg)}
+.project-sub{font-size:12px;color:var(--fg-dim);line-height:1.45}
+.project-icon{position:absolute;top:14px;right:14px;width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(201,169,97,.5);color:var(--gold);background:rgba(10,10,10,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transform:scale(.92);transition:all .3s;font-family:var(--mono);font-size:14px;z-index:3;pointer-events:none}
+.project-card:hover .project-icon{opacity:1;transform:scale(1)}
+.project-card:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
+@media(max-width:960px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.projects-grid{grid-template-columns:1fr}.project-title{font-size:20px}}
+
+/* ── LIGHTBOX ─────────────────────────────────────────────────────────────── */
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:60px 24px 28px;opacity:0;transition:opacity .25s}
+.lightbox.show{display:flex;opacity:1}
+.lightbox-inner{max-width:1200px;width:100%;position:relative}
+.lightbox-img{width:100%;height:auto;display:block;max-height:78vh;object-fit:contain;border:1px solid rgba(201,169,97,.18);background:var(--bg-2)}
+.lightbox-cap{margin-top:16px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.lightbox-meta-type{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:block}
+.lightbox-meta-title{font-family:var(--serif);font-size:24px;line-height:1.15;color:var(--fg)}
+.lightbox-meta-sub{font-size:13px;color:var(--fg-dim);font-family:var(--mono);letter-spacing:0.06em}
+.lightbox-close{position:absolute;top:-50px;right:0;background:transparent;border:1px solid var(--line-2);color:var(--fg);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;transition:all .2s;font-family:var(--mono);font-size:18px;line-height:1}
+.lightbox-close:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:720px){.lightbox{padding:0 0 16px}.lightbox-inner{padding:0 16px}.lightbox-close{top:16px;right:16px;background:rgba(10,10,10,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.lightbox-meta-title{font-size:18px}}
+
 /* ── FORM ────────────────────────────────────────────────────────────────── */
 .calc{background:var(--bg-2);border:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr}
 .calc-l{padding:64px 56px;border-right:1px solid var(--line)}
@@ -956,13 +988,99 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   </div>
 </section>
 
+<!-- PROJECTS / CASES -->
+<section id="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="sec-eyebrow">
+          <span class="sec-num">06</span>
+          <span class="sec-label">Реальні роботи</span>
+        </div>
+        <h2 class="sec-title" id="projects-title">Наші <em>встановлення</em></h2>
+      </div>
+      <p class="sec-desc">
+        Більше 340 СЕС у Львові та області — від приватних будинків до промислових дахів. Реальні об'єкти, реальна економія для реальних клієнтів.
+      </p>
+    </div>
+    <div class="projects-grid" role="list">
+      <button class="project-card reveal" type="button" data-pid="1" aria-label="Відкрити фото: Захід сонця, дахова СЕС" role="listitem">
+        <div class="project-media">
+          <img src="/assets/projects/project-1-sunset-600.webp" srcset="/assets/projects/project-1-sunset-600.webp 600w, /assets/projects/project-1-sunset-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на даху приватного будинку на заході сонця, Львівщина">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Дахова СЕС</span>
+          <div class="project-title">Захід сонця</div>
+          <div class="project-sub">Львівщина · приватний будинок</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-1" type="button" data-pid="2" aria-label="Відкрити фото: Преміум монтаж, приватний будинок" role="listitem">
+        <div class="project-media">
+          <img src="/assets/projects/project-2-modern-home-600.webp" srcset="/assets/projects/project-2-modern-home-600.webp 600w, /assets/projects/project-2-modern-home-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на даху сучасного приватного будинку, преміум монтаж, Львів">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Приватний будинок</span>
+          <div class="project-title">Преміум монтаж</div>
+          <div class="project-sub">Львів · інтегрована система</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-2" type="button" data-pid="3" aria-label="Відкрити фото: Львівщина, дахова СЕС на черепиці" role="listitem">
+        <div class="project-media">
+          <img src="/assets/projects/project-3-tile-roof-600.webp" srcset="/assets/projects/project-3-tile-roof-600.webp 600w, /assets/projects/project-3-tile-roof-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на черепичному даху приватного будинку, Львівська область">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Приватний будинок</span>
+          <div class="project-title">Черепичний дах</div>
+          <div class="project-sub">Львівська область</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal" type="button" data-pid="4" aria-label="Відкрити фото: Сучасний дім з повним покриттям даху" role="listitem">
+        <div class="project-media">
+          <img src="/assets/projects/project-4-bright-home-600.webp" srcset="/assets/projects/project-4-bright-home-600.webp 600w, /assets/projects/project-4-bright-home-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція з повним покриттям скатного даху на сучасному приватному будинку, Львів">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Приватний будинок</span>
+          <div class="project-title">Повне покриття даху</div>
+          <div class="project-sub">Сонячне покриття · Львів</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-1" type="button" data-pid="5" aria-label="Відкрити фото: Промислова СЕС, комерційний об'єкт" role="listitem">
+        <div class="project-media">
+          <img src="/assets/projects/project-5-commercial-600.webp" srcset="/assets/projects/project-5-commercial-600.webp 600w, /assets/projects/project-5-commercial-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Промислова сонячна станція на плоскому даху комерційного об'єкта">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Бізнес-об'єкт</span>
+          <div class="project-title">Промисловий дах</div>
+          <div class="project-sub">Комерційна СЕС · Львівщина</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-2" type="button" data-pid="6" aria-label="Відкрити фото: Зимова експлуатація СЕС, бізнес" role="listitem">
+        <div class="project-media">
+          <img src="/assets/projects/project-6-winter-600.webp" srcset="/assets/projects/project-6-winter-600.webp 600w, /assets/projects/project-6-winter-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Бригада на даху комерційного об'єкта зимою — сонячна станція працює цілорічно">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Бізнес-об'єкт</span>
+          <div class="project-title">Зимова експлуатація</div>
+          <div class="project-sub">Цілорічна робота · Львівщина</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- FORM -->
 <section id="contact" aria-labelledby="contact-title">
   <div class="container">
     <div class="calc">
       <div class="calc-l">
         <div class="calc-eyebrow">
-          <span class="sec-num">06</span>
+          <span class="sec-num">07</span>
           <span class="sec-label">Безкоштовний розрахунок</span>
         </div>
         <h2 class="calc-h" id="contact-title">Дізнайтесь скільки <em>зекономите</em></h2>
@@ -1093,7 +1211,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     <div class="sec-head">
       <div>
         <div class="sec-eyebrow">
-          <span class="sec-num">07</span>
+          <span class="sec-num">08</span>
           <span class="sec-label">Відповіді на запитання</span>
         </div>
         <h2 class="sec-title" id="faq-title">Часті <em>питання</em></h2>
@@ -1180,7 +1298,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       <div class="foot-col">
         <h4>Компанія</h4>
         <a href="#benefits">Переваги</a>
-        <a href="#how">Як ми працюємо</a>
+        <a href="#projects">Реальні роботи</a>
         <a href="#reviews">Відгуки клієнтів</a>
         <a href="#faq">Питання та відповіді</a>
       </div>
@@ -1207,6 +1325,21 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   <svg width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 1.5h3l1 3.5-2 1.5a9 9 0 004 4l1.5-2 3.5 1v3c0 .8-.7 1.5-1.5 1.5C5 14.5 1.5 9.5 1.5 4c0-.8.7-1.5 1-2.5z" stroke="currentColor" stroke-width="1.3"/></svg>
   Передзвоніть
 </a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Закрити" type="button">×</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-cap">
+      <div>
+        <span class="lightbox-meta-type" id="lightboxType"></span>
+        <div class="lightbox-meta-title" id="lightboxTitle"></div>
+      </div>
+      <div class="lightbox-meta-sub" id="lightboxSub"></div>
+    </div>
+  </div>
+</div>
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Швидке замовлення">
@@ -1483,6 +1616,58 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       requestAnimationFrame(updateScrollUI);
     }
   }, { passive: true });
+
+  /* ── Projects lightbox ──────────────────────────────────────────────── */
+  var projectsData = {
+    '1': { src: '/assets/projects/project-1-sunset-1200.webp',       type: 'Дахова СЕС',         title: 'Захід сонця',           sub: 'Львівщина · приватний будинок' },
+    '2': { src: '/assets/projects/project-2-modern-home-1200.webp',  type: 'Приватний будинок',  title: 'Преміум монтаж',        sub: 'Львів · інтегрована система' },
+    '3': { src: '/assets/projects/project-3-tile-roof-1200.webp',    type: 'Приватний будинок',  title: 'Черепичний дах',        sub: 'Львівська область' },
+    '4': { src: '/assets/projects/project-4-bright-home-1200.webp',  type: 'Приватний будинок',  title: 'Повне покриття даху',   sub: 'Сонячне покриття · Львів' },
+    '5': { src: '/assets/projects/project-5-commercial-1200.webp',   type: "Бізнес-об'єкт",      title: 'Промисловий дах',       sub: 'Комерційна СЕС · Львівщина' },
+    '6': { src: '/assets/projects/project-6-winter-1200.webp',       type: "Бізнес-об'єкт",      title: 'Зимова експлуатація',   sub: 'Цілорічна робота · Львівщина' }
+  };
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
+  var lightboxType  = document.getElementById('lightboxType');
+  var lightboxTitle = document.getElementById('lightboxTitle');
+  var lightboxSub   = document.getElementById('lightboxSub');
+  var lightboxClose = document.getElementById('lightboxClose');
+  var lastFocus     = null;
+
+  function openLightbox(pid) {
+    var p = projectsData[pid];
+    if (!p || !lightbox) return;
+    lastFocus = document.activeElement;
+    lightboxImg.src = p.src;
+    lightboxImg.alt = p.type + ' — ' + p.title;
+    lightboxType.textContent = p.type;
+    lightboxTitle.textContent = p.title;
+    lightboxSub.textContent = p.sub;
+    lightbox.classList.add('show');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { lightboxClose.focus(); }, 30);
+  }
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('show');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.querySelectorAll('.project-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      openLightbox(card.getAttribute('data-pid'));
+    });
+  });
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('show')) closeLightbox();
+  });
 
   } catch (e) { console.error('[SE]', e); }
 })();
