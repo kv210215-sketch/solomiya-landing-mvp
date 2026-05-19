@@ -2,8 +2,9 @@
 // Place this file at: functions/api/lead.js
 // Env vars required (set in Cloudflare dashboard → Settings → Environment variables):
 //   TELEGRAM_BOT_TOKEN  — from @BotFather
-//   TELEGRAM_CHAT_ID    — target chat / channel id
-//   ALLOWED_ORIGIN      — (optional) e.g. https://solomiyaenergy.com — restricts CORS
+//   TELEGRAM_CHAT_ID    — target chat / channel id (chat.id from getUpdates, NOT update_id)
+//   ALLOWED_ORIGIN      — comma-separated list of allowed origins, or "*"
+//                         e.g. https://solar.solomiya-energy.com,https://solomiya-energy.com
 //
 // Cloudflare auto-routes this to /api/lead. No build step.
 
@@ -13,12 +14,12 @@ const escapeHtml = (s) =>
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 
-export async function onRequestOptions({ env }) {
-  return new Response(null, { status: 204, headers: corsHeaders(env) });
+export async function onRequestOptions({ request, env }) {
+  return new Response(null, { status: 204, headers: corsHeaders(env, request) });
 }
 
 export async function onRequestPost({ request, env }) {
-  const headers = { "Content-Type": "application/json", ...corsHeaders(env) };
+  const headers = { "Content-Type": "application/json", ...corsHeaders(env, request) };
 
   if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) {
     return new Response(
@@ -89,10 +90,16 @@ export async function onRequestPost({ request, env }) {
   return new Response(JSON.stringify({ success: true }), { status: 200, headers });
 }
 
-function corsHeaders(env) {
-  const origin = env.ALLOWED_ORIGIN || "*";
+function corsHeaders(env, request) {
+  const list = (env.ALLOWED_ORIGIN || "*").split(",").map((s) => s.trim()).filter(Boolean);
+  const reqOrigin = request?.headers.get("Origin") || "";
+  let acao = "*";
+  if (!list.includes("*")) {
+    acao = list.includes(reqOrigin) ? reqOrigin : list[0] || "*";
+  }
   return {
-    "Access-Control-Allow-Origin": origin,
+    "Access-Control-Allow-Origin": acao,
+    "Vary": "Origin",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Max-Age": "86400",
