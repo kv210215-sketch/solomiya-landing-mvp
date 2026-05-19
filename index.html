@@ -347,6 +347,11 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
 .foot-col p{color:var(--fg-dim);font-size:14px;line-height:1.68}
 .foot-brand{font-family:var(--serif);font-size:22px;margin-bottom:10px}
 .foot-brand span{color:var(--gold)}
+.foot-legal{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg-mute);margin-bottom:14px;line-height:1.5}
+.foot-tagline{color:var(--fg);font-size:14px;line-height:1.5;margin-bottom:8px;font-weight:500}
+.foot-services{font-size:12.5px;color:var(--fg-dim);line-height:1.6}
+.foot-services .sep{color:var(--gold);padding:0 6px;opacity:.7}
+.contact-label{display:inline-block;color:var(--fg-mute);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;margin-right:6px}
 .foot-bot{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10px;color:var(--fg-mute);letter-spacing:0.08em;text-transform:uppercase;flex-wrap:wrap}
 @media(max-width:960px){.foot-grid{grid-template-columns:1fr 1fr;gap:28px 24px}}
 @media(max-width:540px){.foot-grid{grid-template-columns:1fr}.foot-bot{flex-direction:column;align-items:flex-start;gap:8px}}
@@ -1150,7 +1155,11 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     <div class="foot-grid">
       <div class="foot-col">
         <div class="foot-brand">SOLOMIYA <span>ENERGY</span></div>
-        <p>Сонячні електростанції під ключ у Львові та Львівській області з 2017 року.</p>
+        <p class="foot-legal">ТзОВ «Соломія Енергозбереження»</p>
+        <p class="foot-tagline">Сонячні електростанції під ключ</p>
+        <p class="foot-services">
+          Проєктування<span class="sep" aria-hidden="true">•</span>Погодження в ОСР<span class="sep" aria-hidden="true">•</span>Монтаж<span class="sep" aria-hidden="true">•</span>Сервіс
+        </p>
       </div>
       <div class="foot-col">
         <h4>Послуги</h4>
@@ -1169,11 +1178,9 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       <div class="foot-col">
         <h4>Контакти</h4>
         <address style="font-style:normal">
-          <a href="tel:+380675554000">+38 067 555 40 00</a>
-          <a href="mailto:andriy555solar@gmail.com">andriy555solar@gmail.com</a>
-          <a href="https://www.solomiya-energy.com" target="_blank" rel="noopener noreferrer">www.solomiya-energy.com</a>
-          <a href="https://maps.google.com/?q=Львів,+вул.+Стрийська,+45" target="_blank" rel="noopener noreferrer">м. Львів, вул. Стрийська, 45</a>
-          <span style="color:var(--fg-dim);font-size:14px;display:block;margin-bottom:9px">Пн–Пт: 9:00–18:00</span>
+          <a href="tel:+380675554000"><span class="contact-label">Телефон</span>+38 067 555 40 00</a>
+          <a href="mailto:andriy555solar@gmail.com"><span class="contact-label">E-mail</span>andriy555solar@gmail.com</a>
+          <a href="https://solomiya-energy.com" target="_blank" rel="noopener noreferrer"><span class="contact-label">Сайт</span>solomiya-energy.com</a>
         </address>
       </div>
     </div>
