@@ -299,7 +299,7 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .lightbox-meta-sub{font-size:13px;color:var(--fg-dim);font-family:var(--mono);letter-spacing:0.06em}
 .lightbox-close{position:absolute;top:-50px;right:0;background:transparent;border:1px solid var(--line-2);color:var(--fg);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;transition:all .2s;font-family:var(--mono);font-size:18px;line-height:1}
 .lightbox-close:hover{border-color:var(--gold);color:var(--gold)}
-@media(max-width:720px){.lightbox{padding:0 0 16px}.lightbox-inner{padding:0 16px}.lightbox-close{top:16px;right:16px;background:rgba(10,10,10,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.lightbox-meta-title{font-size:18px}}
+@media(max-width:720px){.lightbox{padding:0 0 16px}.lightbox-inner{padding:0 16px}.lightbox-close{top:16px;right:16px;width:44px;height:44px;font-size:22px;background:rgba(10,10,10,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.lightbox-meta-title{font-size:18px}}
 
 /* ── FORM ────────────────────────────────────────────────────────────────── */
 .calc{background:var(--bg-2);border:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr}
@@ -1003,8 +1003,8 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         Більше 340 СЕС у Львові та області — від приватних будинків до промислових дахів. Реальні об'єкти, реальна економія для реальних клієнтів.
       </p>
     </div>
-    <div class="projects-grid" role="list">
-      <button class="project-card reveal" type="button" data-pid="1" aria-label="Відкрити фото: Захід сонця, дахова СЕС" role="listitem">
+    <div class="projects-grid">
+      <button class="project-card reveal" type="button" data-pid="1" aria-label="Відкрити фото: Захід сонця, дахова СЕС">
         <div class="project-media">
           <img src="/assets/projects/project-1-sunset-600.webp" srcset="/assets/projects/project-1-sunset-600.webp 600w, /assets/projects/project-1-sunset-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на даху приватного будинку на заході сонця, Львівщина">
         </div>
@@ -1015,7 +1015,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         </div>
         <div class="project-icon" aria-hidden="true">↗</div>
       </button>
-      <button class="project-card reveal reveal-delay-1" type="button" data-pid="2" aria-label="Відкрити фото: Преміум монтаж, приватний будинок" role="listitem">
+      <button class="project-card reveal reveal-delay-1" type="button" data-pid="2" aria-label="Відкрити фото: Преміум монтаж, приватний будинок">
         <div class="project-media">
           <img src="/assets/projects/project-2-modern-home-600.webp" srcset="/assets/projects/project-2-modern-home-600.webp 600w, /assets/projects/project-2-modern-home-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на даху сучасного приватного будинку, преміум монтаж, Львів">
         </div>
@@ -1026,7 +1026,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         </div>
         <div class="project-icon" aria-hidden="true">↗</div>
       </button>
-      <button class="project-card reveal reveal-delay-2" type="button" data-pid="3" aria-label="Відкрити фото: Львівщина, дахова СЕС на черепиці" role="listitem">
+      <button class="project-card reveal reveal-delay-2" type="button" data-pid="3" aria-label="Відкрити фото: Львівщина, дахова СЕС на черепиці">
         <div class="project-media">
           <img src="/assets/projects/project-3-tile-roof-600.webp" srcset="/assets/projects/project-3-tile-roof-600.webp 600w, /assets/projects/project-3-tile-roof-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на черепичному даху приватного будинку, Львівська область">
         </div>
@@ -1037,7 +1037,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         </div>
         <div class="project-icon" aria-hidden="true">↗</div>
       </button>
-      <button class="project-card reveal" type="button" data-pid="4" aria-label="Відкрити фото: Сучасний дім з повним покриттям даху" role="listitem">
+      <button class="project-card reveal" type="button" data-pid="4" aria-label="Відкрити фото: Сучасний дім з повним покриттям даху">
         <div class="project-media">
           <img src="/assets/projects/project-4-bright-home-600.webp" srcset="/assets/projects/project-4-bright-home-600.webp 600w, /assets/projects/project-4-bright-home-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція з повним покриттям скатного даху на сучасному приватному будинку, Львів">
         </div>
@@ -1048,7 +1048,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         </div>
         <div class="project-icon" aria-hidden="true">↗</div>
       </button>
-      <button class="project-card reveal reveal-delay-1" type="button" data-pid="5" aria-label="Відкрити фото: Промислова СЕС, комерційний об'єкт" role="listitem">
+      <button class="project-card reveal reveal-delay-1" type="button" data-pid="5" aria-label="Відкрити фото: Промислова СЕС, комерційний об'єкт">
         <div class="project-media">
           <img src="/assets/projects/project-5-commercial-600.webp" srcset="/assets/projects/project-5-commercial-600.webp 600w, /assets/projects/project-5-commercial-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Промислова сонячна станція на плоскому даху комерційного об'єкта">
         </div>
@@ -1059,7 +1059,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         </div>
         <div class="project-icon" aria-hidden="true">↗</div>
       </button>
-      <button class="project-card reveal reveal-delay-2" type="button" data-pid="6" aria-label="Відкрити фото: Зимова експлуатація СЕС, бізнес" role="listitem">
+      <button class="project-card reveal reveal-delay-2" type="button" data-pid="6" aria-label="Відкрити фото: Зимова експлуатація СЕС, бізнес">
         <div class="project-media">
           <img src="/assets/projects/project-6-winter-600.webp" srcset="/assets/projects/project-6-winter-600.webp 600w, /assets/projects/project-6-winter-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Бригада на даху комерційного об'єкта зимою — сонячна станція працює цілорічно">
         </div>
@@ -1666,7 +1666,13 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('show')) closeLightbox();
+    if (!lightbox || !lightbox.classList.contains('show')) return;
+    if (e.key === 'Escape') { closeLightbox(); return; }
+    /* Focus trap — only one focusable element (close button), so any Tab keeps it there */
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      lightboxClose.focus();
+    }
   });
 
   } catch (e) { console.error('[SE]', e); }
