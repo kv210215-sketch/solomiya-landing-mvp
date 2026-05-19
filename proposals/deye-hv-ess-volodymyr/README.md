@@ -1,14 +1,16 @@
 # Solomiya Energy · Commercial Proposal
-### Deye HV ESS — Володимир, м. Берестин
+### Deye High Voltage ESS — 30 kW / 61.44 kWh
 
-A4-vertical, premium PDF-ready proposal. Black · Ivory · Champagne Gold.
+Luxury industrial proposal · A4 vertical · PDF-ready
+Visual register: Tesla Energy · Huawei FusionSolar · BYD · Schneider Electric
 
 ---
 
 ## 1. Файл
 
 - `index.html` — самодостатній документ. Жодних білдів, жодних залежностей,
-  крім Google Fonts (Cormorant Garamond + Inter).
+  крім Google Fonts (Cormorant Garamond + Inter). Працює offline після першого
+  завантаження шрифтів.
 
 ## 2. Експорт у PDF
 
@@ -21,61 +23,96 @@ A4-vertical, premium PDF-ready proposal. Black · Ivory · Champagne Gold.
    - **Paper size:** *A4*
    - **Margins:** *None*
    - **Scale:** *Default (100%)*
-   - **Options → Background graphics:** ✅ **увімкнути** (інакше зникне золото та темний фон)
+   - **Options → Background graphics:** ✅ **обов'язково увімкнути**
+     (інакше зникне золото та темний фон)
 4. *Save → `Solomiya-Energy_Deye-HV-ESS_Volodymyr.pdf`*
 
-CLI-варіант (опційно, якщо встановлений Chromium / Chrome headless):
+CLI-варіант (Chromium headless):
 
 ```bash
 chromium --headless --disable-gpu \
-  --no-pdf-header-footer \
   --print-to-pdf-no-header \
+  --no-pdf-header-footer \
   --print-to-pdf="./Solomiya-Energy_Deye-HV-ESS_Volodymyr.pdf" \
   "file://$(pwd)/proposals/deye-hv-ess-volodymyr/index.html"
 ```
 
-## 3. Структура (5 сторінок)
+## 3. Структура (6 сторінок)
 
-| #  | Сторінка             | Зміст                                                                          |
-|----|----------------------|--------------------------------------------------------------------------------|
-| 01 | **Cover**            | Brand mark · документ № · заголовок · замовник · інвестиція · контакти         |
-| 02 | **Про рішення**      | Концепція · призначення · 3 ключові KPI (30 кВт / 61.44 кВт·год / HV 3Φ)       |
-| 03 | **Склад обладнання** | Преміальна BOM-таблиця · нотатки · TOTAL-блок                                  |
-| 04 | **Тех. характ. + переваги** | 10-параметрова spec-grid · бейджі · 6 advantage-карток                  |
-| 05 | **Інвестиція**       | Hero TOTAL `$13 060 USD` · умови · підписи · корпоративний футер               |
+| #  | Сторінка                | Зміст                                                                       |
+|----|-------------------------|-----------------------------------------------------------------------------|
+| 01 | **Cover**               | DEYE HIGH VOLTAGE ESS · 30 kW / 61.44 kWh subtitle · 4 KPI cells · meta     |
+| 02 | **Executive Summary**   | Концепція · призначення · 4 KPI-блоки (Power / Capacity / Topology / Investment) |
+| 03 | **Bill of Materials**   | Enterprise BOM-таблиця · Qty · Unit · Sum · TOTAL                           |
+| 04 | **Technical Specs**     | 16 параметрів у 2 колонки · 6 cert-бейджів                                  |
+| 05 | **System Advantages**   | 5 секцій з SVG-іконами:                                                     |
+|    |                         | System Advantages · Energy Independence · Scalability ·                     |
+|    |                         | Remote Monitoring · LiFePO₄ Safety Technology                               |
+| 06 | **Investment + Sign**   | TOTAL hero `$13 060 USD` · інклюзив · умови · підписи · corporate footer    |
 
 ## 4. Дизайн-система
 
 ### Палітра
 
-| Token         | HEX        | Призначення                          |
-|---------------|------------|--------------------------------------|
-| `--ink`       | `#0A0A0A`  | Onyx — основа cover                  |
-| `--ink-2`     | `#111111`  | Фон сторінки                         |
-| `--ink-3`     | `#161616`  | Картки, акценти                      |
-| `--ivory`     | `#F4F1EA`  | Основний текст                       |
-| `--gold`      | `#C9A961`  | Champagne — основний акцент          |
-| `--gold-soft` | `#8B7A4A`  | Приглушене золото                    |
-| `--gold-line` | `rgba(201,169,97,.35)` | Тонкі золоті лінії       |
-| `--line`      | `#2A2A2A`  | Сірі хвилеподібні лінії              |
-| `--mute`      | `#8A8780`  | Вторинний текст                      |
+| Token            | HEX                          | Призначення                       |
+|------------------|------------------------------|-----------------------------------|
+| `--ink-0`        | `#050505`                    | Cover deep base                   |
+| `--ink-1`        | `#0A0A0A`                    | Page background                   |
+| `--ink-2/3/4`    | `#0F` / `#14` / `#1A`        | Card layers                       |
+| `--ivory`        | `#F4F1EA`                    | Primary text                      |
+| `--ivory-2`      | `#E6E2D7`                    | Body text                         |
+| `--gold`         | `#C9A961`                    | Champagne — main accent           |
+| `--gold-2`       | `#B89548`                    | Deeper gold                       |
+| `--gold-soft`    | `#8B7A4A`                    | Muted gold                        |
+| `--gold-line`    | `rgba(201,169,97,.32)`       | Hairlines                         |
+| `--gold-line-2`  | `rgba(201,169,97,.18)`       | Inner frames                      |
+| `--gold-glow`    | `rgba(201,169,97,.06)`       | Soft backgrounds                  |
+| `--mute`         | `#908C84`                    | Secondary text                    |
+| `--line`         | `#232323`                    | Internal dividers                 |
 
 ### Типографіка
 
-- **Display / Headings:** [`Cormorant Garamond`](https://fonts.google.com/specimen/Cormorant+Garamond) 300/400/500 — luxury serif (рівень Tesla Energy брошур та high-end real estate).
-- **Body / UI:** [`Inter`](https://fonts.google.com/specimen/Inter) 200/300/400/500 — clean corporate sans, чудово рендериться на A4.
-- **Numerals:** Cormorant у `--gold` для усіх грошових та KPI-чисел — це той самий прийом, що Huawei / Sungrow застосовують у тендерній документації.
+- **Display / Headings:** [`Cormorant Garamond`](https://fonts.google.com/specimen/Cormorant+Garamond) 300/400/500
+  — luxury serif (Tesla Energy брошури, high-end real estate, Hermès docs).
+- **Body / UI:** [`Inter`](https://fonts.google.com/specimen/Inter) 200/300/400/500
+  — clean corporate sans, відмінний рендер на A4.
+- **Numerals:** Cormorant у `--gold` для всіх грошових / KPI чисел.
+- **Tabular numerals:** `font-feature-settings:"tnum"` для BOM-таблиці.
+
+### Cover headline scale
+
+- `DEYE` — 64pt, weight 300
+- `High Voltage` — 64pt, italic, color gold
+- `ESS` — 64pt, weight 300, letter-spacing .02em
+
+### TOTAL block scale
+
+- `$` — 48pt Cormorant, gold
+- `13 060` — **104pt** Cormorant 300, ivory, tracking −.02em
+- `USD` — 14pt Inter, gold, tracking .32em
+- Double-frame: 1 px outer gold border + 1 px inner gold-line ornament
+
+### Icon system
+
+5 inline SVG icons (32×32 viewBox, 1 px stroke, `currentColor`=gold):
+
+- factory/building — System Advantages
+- sun rays — Energy Independence
+- stacked layers — Scalability
+- cloud + check — Remote Monitoring
+- shield + check — LiFePO₄ Safety
+
+Кожна іконка вписана у 54×54 px квадрат з тонкою золотою рамкою.
 
 ### Layout-принципи
 
-- Поля сторінки: **22 мм / 20 мм / 18 мм / 20 мм** — премʼєральний "люфт".
-- Cornered L-marks по кутах сторінки (1 px gold).
-- Hairlines: завжди `1px` з `--gold-line`, не 2px.
-- Жодних shadow / glow всередині сторінки — тільки на frame документа.
-- Заголовки секцій: римська цифра золотом + serif H2 + золотий italic-фрагмент.
-- TOTAL: великий serif numeral (96pt) з знаком `$` у золоті — fokal point всього КП.
+- Поля сторінки: **24 / 22 / 22 / 22 mm** — преміальний "люфт".
+- Cornered gold L-marks (4 по кутах) — 12×12 mm, 1 px gold.
+- Hairlines: завжди `1px` з `--gold-line`. Жодних 2-3 px рамок.
+- `page-break-inside: avoid` на TOTAL card, advantage-row, KPI-row, spec-list.
+- Two-stage frames: зовнішня лінія gold + внутрішня gold-line — підпис luxury.
 
-## 5. Brand tokens (для перенесення на сайт)
+## 5. Brand tokens для перенесення на сайт
 
 ```css
 :root{
@@ -83,18 +120,28 @@ chromium --headless --disable-gpu \
   --se-ivory: #F4F1EA;
   --se-gold: #C9A961;
   --se-gold-soft: #8B7A4A;
+  --se-gold-line: rgba(201,169,97,.32);
   --se-font-display: "Cormorant Garamond", serif;
   --se-font-ui: "Inter", system-ui, sans-serif;
 }
 ```
 
-## 6. Варіації
+## 6. Варіації під інших клієнтів
 
-Документ легко переробити під іншого клієнта:
+Щоб переробити документ під нового замовника:
 
-1. Замінити `Володимир` / `м. Берестин` на cover (page 1) та signature (page 5).
-2. Оновити № документу: `SE·2026·ESS·017`.
-3. Оновити BOM-таблицю (page 3) — структура `[№][обладнання+SKU][к-сть][ціна][сума]`.
-4. Оновити hero TOTAL (page 5).
+1. **Cover (page 1):** `Володимир` → нове ім'я, `м. Берестин` → нове місто.
+2. **Doc №:** `SE·2026·ESS·017` → новий ID.
+3. **BOM (page 3):** оновити рядки `[№][компонент+SKU][Qty][Unit][Sum]`.
+4. **TOTAL (page 6):** оновити `13 060` у hero-блоці.
+5. **Signature (page 6):** оновити прізвища замовника та виконавця.
 
-Решта (брендинг, переваги, тех-секція) — багаторазові.
+Решта (типографіка, advantages, тех-секція) — багаторазові заготовки.
+
+## 7. Print-safety checklist
+
+- [ ] Background graphics увімкнено → темний фон + золото відображаються
+- [ ] Paper: A4 · Margins: None · Scale: 100%
+- [ ] Жодна секція не розривається між сторінками (`page-break-inside: avoid`)
+- [ ] Усі 6 сторінок повністю вміщуються
+- [ ] Cover gradient переходить плавно, без бендингу
