@@ -114,7 +114,7 @@
 | Phone | +380675554000 | ✅ |
 | Email | andriy555solar@gmail.com | ✅ |
 | Website | https://www.solomiya-energy.com | ✅ |
-| Address | вул. Городоцька 202, Львів | ✅ |
+| Address | вул. Стрийська, 45, Львів | ✅ |
 | Legal entity | ТОВ «Соломія енергозбереження» · ЄДРПОУ 40446535 | in README only |
 | Founded | 2017 | ✅ in JSON-LD |
 
