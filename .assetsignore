@@ -1,0 +1,51 @@
+# Exclude server-side source, configs, and developer artifacts from
+# Cloudflare Workers Static Assets. These must never be served as files.
+
+# Worker source + Pages function source
+src/
+functions/
+
+# Build / runtime configs
+wrangler.jsonc
+wrangler.toml
+package.json
+package-lock.json
+.nvmrc
+
+# Env / secrets (defensive — .env is gitignored, but belt + suspenders)
+.env
+.env.*
+!.env.example
+
+# Docs and repo metadata
+docs/
+README.md
+CHANGELOG.md
+project-rules.md
+project-todo.md
+ai/
+
+# Local backups / temp / cache
+backup/
+backups/
+.cache/
+.wrangler/
+node_modules/
+tmp-*
+*.log
+
+# Legacy platform configs (kept in repo, not served)
+netlify/
+netlify.toml
+api/
+
+# Tooling
+.claude/
+.git/
+.gitignore
+.aiignore
+.dev.vars*
+
+# Special files Cloudflare processes internally (not for direct serving)
+_headers
+_redirects

@@ -1,12 +1,15 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "solomiya-landing-mvp",
+  "main": "src/index.js",
   "compatibility_date": "2026-05-19",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
   },
   "compatibility_flags": [
     "nodejs_compat"
