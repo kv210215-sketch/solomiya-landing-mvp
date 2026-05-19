@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Сонячні електростанції під ключ у Львові — Solomiya Energy</title>
+<title>Сонячні станції під ключ у Львові | Solomiya Energy</title>
 <meta name="description" content="Сонячні електростанції під ключ у Львові. Економія до 70% на електроенергії. Монтаж за 1–3 дні. Гарантія 25 років. Безкоштовний розрахунок від інженера.">
 <meta name="keywords" content="сонячні панелі Львів, СЕС під ключ Львів, сонячна електростанція, інвертор Deye, Longi панелі, акумулятори Dyness, Solomiya Energy">
 <meta name="robots" content="index, follow">
@@ -36,8 +36,8 @@
 <meta name="twitter:image:alt" content="Solomiya Energy — Сонячні електростанції під ключ у Львові">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ── TOKENS ─────────────────────────────────────────────────────────────── */
 :root{
@@ -94,7 +94,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 
 /* ── URGENCY STRIP ───────────────────────────────────────────────────────── */
 .urgency{background:var(--gold);color:#0A0A0A;font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:9px 0;overflow:hidden;max-width:100%;contain:layout paint;mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%)}
-.urgency-track{display:flex;gap:52px;white-space:nowrap;animation:scroll 55s linear infinite;will-change:transform}
+.urgency-track{display:flex;gap:52px;white-space:nowrap;animation:scroll 55s linear infinite}
 .urgency-track span{display:inline-flex;align-items:center;gap:10px}
 .urgency-track .dot{width:3px;height:3px;background:#0A0A0A;border-radius:50%;opacity:.45;flex-shrink:0}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -156,7 +156,7 @@ h1.hero-title em{font-style:italic;color:var(--gold)}
 .hero-stats-row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line)}
 .hero-stats-row:last-child{border-bottom:0;padding-bottom:0}
 .hero-stats-row:first-child{padding-top:0}
-.hero-stats-num{font-family:var(--serif);font-size:36px;color:var(--gold);line-height:1;text-shadow:0 0 36px rgba(201,169,97,.25)}
+.hero-stats-num{font-family:var(--serif);font-size:36px;color:var(--gold);line-height:1;text-shadow:0 0 36px rgba(201,169,97,.25);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .hero-stats-label{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg-mute);max-width:116px;text-align:right;line-height:1.45}
 @media(max-width:1140px){.hero-stats{display:none}}
 
@@ -189,7 +189,7 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .proof-strip{border-bottom:1px solid var(--line)}
 .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
 .proof-cell{background:var(--bg-2);padding:44px 28px;text-align:center}
-.proof-num{font-family:var(--serif);font-size:clamp(52px,6vw,86px);color:var(--gold);line-height:1;margin-bottom:10px;text-shadow:0 0 40px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10)}
+.proof-num{font-family:var(--serif);font-size:clamp(52px,6vw,86px);color:var(--gold);line-height:1;margin-bottom:10px;text-shadow:0 0 40px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .proof-label{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg-mute);line-height:1.55}
 @media(max-width:720px){.proof-grid{grid-template-columns:repeat(2,1fr)}.proof-cell{padding:30px 20px}}
 
@@ -220,7 +220,7 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .ben-cell:hover{background:var(--bg-2)}
 .ben-cell:hover .ben-num{color:var(--gold)}
 .ben-num{font-family:var(--mono);font-size:11px;color:var(--fg-mute);letter-spacing:0.15em;transition:color .25s}
-.ben-big{font-family:var(--serif);font-size:70px;line-height:1;color:var(--gold);margin:20px 0 4px;text-shadow:0 0 36px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10)}
+.ben-big{font-family:var(--serif);font-size:70px;line-height:1;color:var(--gold);margin:20px 0 4px;text-shadow:0 0 36px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .ben-big-sub{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg-mute);margin-bottom:24px}
 .ben-title{font-family:var(--serif);font-size:25px;line-height:1.1;margin-bottom:9px}
 .ben-text{font-size:13px;color:var(--fg-dim);line-height:1.62}
@@ -231,7 +231,7 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
 .step{padding:44px 28px 44px 0;border-right:1px solid var(--line)}
 .step:last-child{border-right:0}
-.step-num{font-family:var(--serif);font-size:68px;line-height:1;color:var(--gold);margin-bottom:20px;font-style:italic;letter-spacing:-0.02em}
+.step-num{font-family:var(--serif);font-size:68px;line-height:1;color:var(--gold);margin-bottom:20px;font-style:italic;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .step-title{font-family:var(--serif);font-size:24px;margin-bottom:10px;line-height:1.15}
 .step-text{font-size:13px;color:var(--fg-dim);line-height:1.68;margin-bottom:14px}
 .step-time{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)}
@@ -356,7 +356,17 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
 .sticky-cta-call:hover{border-color:var(--gold);color:var(--gold)}
 .sticky-cta-btn{background:var(--gold);color:#0A0A0A;padding:11px 18px;font-weight:700;font-size:12px;white-space:nowrap;cursor:pointer;border:0;font-family:var(--sans);transition:background .2s}
 .sticky-cta-btn:hover{background:var(--gold-2)}
+.sticky-cta-msg{background:transparent;border:1px solid var(--line-2);color:var(--fg);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;transition:all .2s;flex-shrink:0;text-decoration:none}
+.sticky-cta-msg:hover{border-color:var(--gold);color:var(--gold)}
 @media(max-width:720px){.sticky-cta{display:flex}}
+@media(max-width:380px){.sticky-cta-msg{display:none}}
+
+/* ── MESSENGER ROW (contact section) ────────────────────────────────────── */
+.msg-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.msg-pill{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid var(--line-2);color:var(--fg-dim);font-size:13px;font-family:var(--sans);text-decoration:none;transition:all .2s}
+.msg-pill:hover{border-color:var(--gold);color:var(--gold)}
+.msg-pill svg{flex-shrink:0;color:var(--gold)}
+.msg-pill-label{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg-mute);margin-bottom:10px;display:block}
 
 /* ── FLOATING CALL BUTTON (desktop) ─────────────────────────────────────── */
 .float-call{position:fixed;right:28px;bottom:36px;z-index:80;background:var(--gold);color:#0A0A0A;display:flex;align-items:center;gap:10px;padding:14px 22px;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:0.01em;border:0;cursor:pointer;text-decoration:none;transform:translateX(140%);transition:transform .5s var(--ease-out),background .2s,box-shadow .2s;box-shadow:0 8px 32px rgba(201,169,97,0.35)}
@@ -975,6 +985,21 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
             <span>Відповідь <strong>протягом 15 хвилин</strong></span>
           </li>
         </ul>
+        <span class="msg-pill-label">Або напишіть нам напряму</span>
+        <div class="msg-row" role="list" aria-label="Месенджери для зв'язку">
+          <a class="msg-pill" href="viber://chat?number=%2B380675554000" rel="noopener" role="listitem" aria-label="Написати у Viber">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 1.5C7.3 1.6 3.3 2.4 1.9 4.6c-.9 1.4-1 4.1-.8 6.6.2 2.4.8 5 2.7 6.4.7.6 1.9.9 1.9.9v3l3.1-2.7c.4 0 .9.1 1.4.1 4.1 0 8.1-.8 9.5-3 .9-1.4 1-4.1.8-6.6-.2-2.4-.8-5-2.7-6.4-1.8-1.4-4.5-1.5-6.4-1.4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 8c.5-.4 1.4-.6 2 0l.8 1.2c.3.4.1.9-.3 1.1l-.6.3a4 4 0 002.4 2.4l.3-.6c.2-.4.7-.6 1.1-.3l1.2.8c.6.6.4 1.5 0 2-1.2 1.3-3.2.4-5-1.4S6.7 9.2 8 8z" fill="currentColor"/></svg>
+            Viber
+          </a>
+          <a class="msg-pill" href="https://t.me/+380675554000" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Написати в Telegram">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="1.3"/><path d="M7 12.2l9.5-3.8c.4-.2.8.2.7.6l-1.6 7.5c-.1.4-.6.6-.9.3l-2.4-1.9-1.3 1.3c-.2.2-.5.1-.5-.2l-.1-2.5L15 9.9l-5.6 3.1L7 12.2z" fill="currentColor"/></svg>
+            Telegram
+          </a>
+          <a class="msg-pill" href="tel:+380675554000" role="listitem" aria-label="Зателефонувати">
+            <svg width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3l1 3.5-2 1.5a9 9 0 004 4l1.5-2 3.5 1v3c0 .8-.7 1.5-1.5 1.5C5.5 14 1.5 9.5 1.5 4c0-.8.7-1.5 1.5-2.5z" stroke="currentColor" stroke-width="1.3"/></svg>
+            Дзвінок
+          </a>
+        </div>
         <div class="urgency-box" role="status">
           <div class="urgency-box-dot" aria-hidden="true"></div>
           <div class="urgency-box-text">⚡ Залишилось 3 місця на монтаж у <span class="urgency-month">цьому місяці</span></div>
@@ -987,8 +1012,9 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
             <input type="text" id="fwebsite" name="website" tabindex="-1" autocomplete="off">
           </div>
           <div class="field">
-            <label class="field-label" for="fname">Ваше ім'я</label>
-            <input class="field-input" id="fname" name="name" type="text" placeholder="Іван Петренко" autocomplete="given-name">
+            <label class="field-label" for="fname">Ваше ім'я <span style="color:var(--gold)" aria-label="обов'язкове поле">*</span></label>
+            <input class="field-input" id="fname" name="name" type="text" placeholder="Іван Петренко" autocomplete="name" minlength="2" required aria-required="true" aria-describedby="nameError">
+            <div class="field-error" id="nameError" role="alert" aria-live="polite">Будь ласка, введіть ваше ім'я</div>
           </div>
           <div class="field">
             <label class="field-label" for="fphone">Телефон <span style="color:var(--gold)" aria-label="обов'язкове поле">*</span></label>
@@ -1153,10 +1179,10 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       </div>
       <div class="foot-col">
         <h4>Компанія</h4>
-        <a href="#">Про нас</a>
-        <a href="#">Наші роботи</a>
+        <a href="#benefits">Переваги</a>
+        <a href="#how">Як ми працюємо</a>
         <a href="#reviews">Відгуки клієнтів</a>
-        <a href="#">Блог</a>
+        <a href="#faq">Питання та відповіді</a>
       </div>
       <div class="foot-col">
         <h4>Контакти</h4>
@@ -1171,7 +1197,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     </div>
     <div class="foot-bot">
       <span>© <span id="yr"></span> SOLOMIYA ENERGY. Всі права захищені.</span>
-      <a href="#" style="text-decoration:none">Політика конфіденційності</a>
+      <a href="#faq" style="text-decoration:none">Політика конфіденційності</a>
     </div>
   </div>
 </footer>
@@ -1189,10 +1215,16 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     <span>Безкоштовно · 15 хвилин</span>
   </div>
   <div class="sticky-cta-actions">
+    <a href="viber://chat?number=%2B380675554000" class="sticky-cta-msg" aria-label="Написати у Viber" rel="noopener">
+      <svg width="15" height="15" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 1.5C7.3 1.6 3.3 2.4 1.9 4.6c-.9 1.4-1 4.1-.8 6.6.2 2.4.8 5 2.7 6.4.7.6 1.9.9 1.9.9v3l3.1-2.7c.4 0 .9.1 1.4.1 4.1 0 8.1-.8 9.5-3 .9-1.4 1-4.1.8-6.6-.2-2.4-.8-5-2.7-6.4-1.8-1.4-4.5-1.5-6.4-1.4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 8c.5-.4 1.4-.6 2 0l.8 1.2c.3.4.1.9-.3 1.1l-.6.3a4 4 0 002.4 2.4l.3-.6c.2-.4.7-.6 1.1-.3l1.2.8c.6.6.4 1.5 0 2-1.2 1.3-3.2.4-5-1.4S6.7 9.2 8 8z" fill="currentColor"/></svg>
+    </a>
+    <a href="https://t.me/+380675554000" class="sticky-cta-msg" aria-label="Написати в Telegram" target="_blank" rel="noopener noreferrer">
+      <svg width="15" height="15" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="1.3"/><path d="M7 12.2l9.5-3.8c.4-.2.8.2.7.6l-1.6 7.5c-.1.4-.6.6-.9.3l-2.4-1.9-1.3 1.3c-.2.2-.5.1-.5-.2l-.1-2.5L15 9.9l-5.6 3.1L7 12.2z" fill="currentColor"/></svg>
+    </a>
     <a href="tel:+380675554000" class="sticky-cta-call" aria-label="Зателефонувати">
       <svg width="13" height="13" fill="none" viewBox="0 0 13 13" aria-hidden="true"><path d="M2 1h2.5l.8 2.8-1.6 1.2a7 7 0 003.3 3.3l1.2-1.6L11 7.5V10c0 .6-.5 1-1 1C3.5 11 1 7 1 3c0-.5.4-1 1-2z" stroke="currentColor" stroke-width="1.2"/></svg>
     </a>
-    <button class="sticky-cta-btn" id="stickyCtaBtn">Залишити заявку</button>
+    <button class="sticky-cta-btn" id="stickyCtaBtn">Заявка</button>
   </div>
 </div>
 
@@ -1228,6 +1260,8 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   /* ── Form submission → /api/lead ─────────────────────────────────────── */
   var form       = document.getElementById('mainForm');
   var success    = document.getElementById('formSuccess');
+  var nameInput  = document.getElementById('fname');
+  var nameError  = document.getElementById('nameError');
   var phoneInput = document.getElementById('fphone');
   var phoneError = document.getElementById('phoneError');
   var apiError   = document.getElementById('formApiError');
@@ -1239,6 +1273,19 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     /* honeypot check */
     var hp = document.getElementById('fwebsite');
     if (hp && hp.value) return;
+
+    var name = nameInput.value.trim();
+    if (name.length < 2) {
+      nameError.textContent = name
+        ? "Ім'я має містити щонайменше 2 символи"
+        : "Будь ласка, введіть ваше ім'я";
+      nameError.style.display = 'block';
+      nameInput.classList.add('error');
+      nameInput.focus();
+      return;
+    }
+    nameError.style.display = 'none';
+    nameInput.classList.remove('error');
 
     var phone = phoneInput.value.trim();
     if (!phone || !isValidPhone(phone)) {
@@ -1255,7 +1302,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     apiError.style.display = 'none';
 
     var data = {
-      name  : document.getElementById('fname').value.trim(),
+      name  : name,
       phone : phone,
       type  : (document.querySelector('input[name="type"]:checked')  || {}).value || '',
       power : (document.querySelector('input[name="power"]:checked') || {}).value || '',
@@ -1282,6 +1329,10 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         form.style.display    = 'none';
         success.style.display = 'block';
         success.focus();
+        var sCta = document.getElementById('stickyCta');
+        if (sCta) sCta.classList.remove('show');
+        var fCall = document.getElementById('floatCall');
+        if (fCall) fCall.classList.remove('show');
       } else {
         throw new Error(result.json.error || 'Server error');
       }
@@ -1291,6 +1342,11 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       submitBtn.disabled = false;
       submitBtn.textContent = 'Отримати розрахунок безкоштовно →';
     });
+  });
+
+  nameInput.addEventListener('input', function () {
+    nameError.style.display = 'none';
+    nameInput.classList.remove('error');
   });
 
   phoneInput.addEventListener('input', function () {
