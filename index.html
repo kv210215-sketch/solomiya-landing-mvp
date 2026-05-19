@@ -17,6 +17,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#C9A961">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.solomiya-energy.com/">
@@ -36,8 +37,8 @@
 <meta name="twitter:image:alt" content="Solomiya Energy — Сонячні електростанції під ключ у Львові">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ── TOKENS ─────────────────────────────────────────────────────────────── */
 :root{
@@ -51,7 +52,9 @@
   --ease-out:cubic-bezier(0.22,1,0.36,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:80px;-webkit-text-size-adjust:100%}
 html,body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden;overflow-x:clip}
+a,button,input,select,textarea,label,[role="button"]{-webkit-tap-highlight-color:rgba(201,169,97,0.18)}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 fieldset{border:none;padding:0;margin:0}
@@ -130,9 +133,12 @@ nav.top{position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.93);backdrop
 @keyframes pulse{0%{opacity:.55;transform:scale(1)}100%{opacity:0;transform:scale(1.16)}}
 @keyframes blink{50%{opacity:.3}}
 .btn:disabled{opacity:.55;cursor:not-allowed;transform:none!important;box-shadow:none!important;background-position:0% 50%!important}
+.btn-spinner{display:inline-block;width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:btn-spin .7s linear infinite;margin-right:8px;vertical-align:-3px}
+@keyframes btn-spin{to{transform:rotate(360deg)}}
+.btn[aria-busy="true"]{cursor:wait}
 
 /* ── HERO ────────────────────────────────────────────────────────────────── */
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:72px;padding-top:90px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:72px;padding-top:90px;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 72% 18%,rgba(201,169,97,0.20) 0%,transparent 52%),radial-gradient(ellipse at 16% 84%,rgba(201,169,97,0.10) 0%,transparent 44%),radial-gradient(ellipse at 50% 110%,rgba(201,169,97,0.05) 0%,transparent 58%)}
 .hero-grid{position:absolute;inset:0;z-index:0;background-image:radial-gradient(rgba(201,169,97,0.09) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse at 60% 40%,black 20%,transparent 70%);mask-image:radial-gradient(ellipse at 60% 40%,black 20%,transparent 70%)}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,10,0.22) 0%,rgba(10,10,10,0.88) 100%)}
@@ -348,6 +354,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
 /* ── STICKY MOBILE CTA ───────────────────────────────────────────────────── */
 .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:90;background:rgba(10,10,10,0.97);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-top:1px solid var(--gold);padding:12px max(16px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));max-width:100%;display:none;align-items:center;gap:10px;overflow:hidden;transform:translateY(100%);transition:transform .4s var(--ease-out)}
 .sticky-cta.show{transform:translateY(0)}
+.sticky-cta.show.cta-hidden{transform:translateY(100%)}
 .sticky-cta-info{flex:1;min-width:0}
 .sticky-cta-info strong{display:block;font-size:13px;line-height:1.2;margin-bottom:2px}
 .sticky-cta-info span{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--gold);text-transform:uppercase}
@@ -391,6 +398,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   .urgency-track{animation-play-state:paused}
   .btn-pulse::after{animation:none}
   .urgency-box-dot,.hero-eyebrow .blink{animation:none;opacity:1}
+  .btn-spinner{animation-duration:.7s!important;animation-iteration-count:infinite!important}
 }
 </style>
 <script type="application/ld+json">
@@ -553,7 +561,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       <span class="hero-stats-label">Встановлених станцій</span>
     </div>
     <div class="hero-stats-row">
-      <span class="hero-stats-num js-years">7</span>
+      <span class="hero-stats-num js-years">9</span>
       <span class="hero-stats-label">Років на ринку</span>
     </div>
     <div class="hero-stats-row">
@@ -572,7 +580,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
           <svg width="17" height="17" fill="none" viewBox="0 0 17 17"><path d="M8.5 1l1.9 4.9 5.1.4-3.8 3.4 1.2 5L8.5 12l-4.4 2.7 1.2-5L1.5 6.3l5.1-.4L8.5 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
         </div>
         <div class="trust-text">
-          <strong><span class="js-years">7</span> років досвіду</strong>
+          <strong><span class="js-years">9</span> років досвіду</strong>
           <span>На ринку з 2017 року</span>
         </div>
       </div>
@@ -1046,7 +1054,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
             Щось пішло не так. Будь ласка, зателефонуйте нам: <a href="tel:+380675554000" style="color:inherit;text-decoration:underline">+38 067 555 40 00</a>
           </div>
           <p class="form-foot">
-            Натискаючи кнопку, ви погоджуєтесь з <a href="#faq" aria-label="Переглянути Політику конфіденційності">Політикою конфіденційності</a>. Дані не передаються третім особам.
+            Натискаючи кнопку, ви погоджуєтесь з <a href="/privacy.html" aria-label="Переглянути Політику конфіденційності">Політикою конфіденційності</a>. Дані не передаються третім особам.
           </p>
         </form>
         <div class="submitted" id="formSuccess" style="display:none" role="status" aria-live="polite" tabindex="-1">
@@ -1153,10 +1161,10 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       </div>
       <div class="foot-col">
         <h4>Компанія</h4>
-        <a href="#">Про нас</a>
-        <a href="#">Наші роботи</a>
+        <a href="#contact">Замовити розрахунок</a>
         <a href="#reviews">Відгуки клієнтів</a>
-        <a href="#">Блог</a>
+        <a href="#faq">Часті питання</a>
+        <a href="/privacy.html">Політика конфіденційності</a>
       </div>
       <div class="foot-col">
         <h4>Контакти</h4>
@@ -1171,7 +1179,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     </div>
     <div class="foot-bot">
       <span>© <span id="yr"></span> SOLOMIYA ENERGY. Всі права захищені.</span>
-      <a href="#" style="text-decoration:none">Політика конфіденційності</a>
+      <a href="/privacy.html" style="text-decoration:none">Політика конфіденційності</a>
     </div>
   </div>
 </footer>
@@ -1233,8 +1241,16 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   var apiError   = document.getElementById('formApiError');
   var submitBtn  = document.getElementById('submitBtn');
 
+  var submitBtnDefaultHtml = submitBtn.innerHTML;
+  var apiErrorDefaultHtml  = apiError.innerHTML;
+  var apiErrorTimeoutHtml  =
+    'Сервер не відповідає. Будь ласка, зателефонуйте: ' +
+    '<a href="tel:+380675554000" style="color:inherit;text-decoration:underline">+38 067 555 40 00</a>';
+  var inFlight = false;
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (inFlight) return;
 
     /* honeypot check */
     var hp = document.getElementById('fwebsite');
@@ -1264,13 +1280,31 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       ts    : new Date().toISOString()
     };
 
+    inFlight = true;
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Відправляємо…';
+    submitBtn.setAttribute('aria-busy', 'true');
+    submitBtn.innerHTML = '<span class="btn-spinner" aria-hidden="true"></span>Відправляємо…';
+
+    var ctrl     = ('AbortController' in window) ? new AbortController() : null;
+    var timedOut = false;
+    var timeoutId = setTimeout(function () {
+      timedOut = true;
+      if (ctrl) ctrl.abort();
+    }, 15000);
+
+    function restoreButton() {
+      clearTimeout(timeoutId);
+      inFlight = false;
+      submitBtn.disabled = false;
+      submitBtn.removeAttribute('aria-busy');
+      submitBtn.innerHTML = submitBtnDefaultHtml;
+    }
 
     fetch('/api/lead', {
       method  : 'POST',
       headers : { 'Content-Type': 'application/json' },
-      body    : JSON.stringify(data)
+      body    : JSON.stringify(data),
+      signal  : ctrl ? ctrl.signal : undefined
     })
     .then(function (res) {
       return res.json().then(function (json) {
@@ -1282,14 +1316,15 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         form.style.display    = 'none';
         success.style.display = 'block';
         success.focus();
+        restoreButton();
       } else {
         throw new Error(result.json.error || 'Server error');
       }
     })
     .catch(function () {
+      apiError.innerHTML = timedOut ? apiErrorTimeoutHtml : apiErrorDefaultHtml;
       apiError.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Отримати розрахунок безкоштовно →';
+      restoreButton();
     });
   });
 
@@ -1382,6 +1417,15 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     var target = document.getElementById('contact');
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  /* ── Hide sticky CTA while typing in the form (avoids keyboard overlap) ─ */
+  var stickyCtaEl = document.getElementById('stickyCta');
+  if (stickyCtaEl && form) {
+    form.querySelectorAll('input, select, textarea').forEach(function (el) {
+      el.addEventListener('focus', function () { stickyCtaEl.classList.add('cta-hidden'); });
+      el.addEventListener('blur',  function () { stickyCtaEl.classList.remove('cta-hidden'); });
+    });
+  }
 
   /* ── Single merged scroll handler ───────────────────────────────────── */
   var stickyCta  = document.getElementById('stickyCta');
