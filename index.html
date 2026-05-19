@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Сонячні електростанції під ключ у Львові — Solomiya Energy</title>
+<title>Сонячні станції під ключ у Львові | Solomiya Energy</title>
 <meta name="description" content="Сонячні електростанції під ключ у Львові. Економія до 70% на електроенергії. Монтаж за 1–3 дні. Гарантія 25 років. Безкоштовний розрахунок від інженера.">
 <meta name="keywords" content="сонячні панелі Львів, СЕС під ключ Львів, сонячна електростанція, інвертор Deye, Longi панелі, акумулятори Dyness, Solomiya Energy">
 <meta name="robots" content="index, follow">
@@ -36,8 +36,8 @@
 <meta name="twitter:image:alt" content="Solomiya Energy — Сонячні електростанції під ключ у Львові">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ── TOKENS ─────────────────────────────────────────────────────────────── */
 :root{
@@ -94,7 +94,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 
 /* ── URGENCY STRIP ───────────────────────────────────────────────────────── */
 .urgency{background:var(--gold);color:#0A0A0A;font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:9px 0;overflow:hidden;max-width:100%;contain:layout paint;mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%)}
-.urgency-track{display:flex;gap:52px;white-space:nowrap;animation:scroll 55s linear infinite;will-change:transform}
+.urgency-track{display:flex;gap:52px;white-space:nowrap;animation:scroll 55s linear infinite}
 .urgency-track span{display:inline-flex;align-items:center;gap:10px}
 .urgency-track .dot{width:3px;height:3px;background:#0A0A0A;border-radius:50%;opacity:.45;flex-shrink:0}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -156,7 +156,7 @@ h1.hero-title em{font-style:italic;color:var(--gold)}
 .hero-stats-row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line)}
 .hero-stats-row:last-child{border-bottom:0;padding-bottom:0}
 .hero-stats-row:first-child{padding-top:0}
-.hero-stats-num{font-family:var(--serif);font-size:36px;color:var(--gold);line-height:1;text-shadow:0 0 36px rgba(201,169,97,.25)}
+.hero-stats-num{font-family:var(--serif);font-size:36px;color:var(--gold);line-height:1;text-shadow:0 0 36px rgba(201,169,97,.25);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .hero-stats-label{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg-mute);max-width:116px;text-align:right;line-height:1.45}
 @media(max-width:1140px){.hero-stats{display:none}}
 
@@ -189,7 +189,7 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .proof-strip{border-bottom:1px solid var(--line)}
 .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
 .proof-cell{background:var(--bg-2);padding:44px 28px;text-align:center}
-.proof-num{font-family:var(--serif);font-size:clamp(52px,6vw,86px);color:var(--gold);line-height:1;margin-bottom:10px;text-shadow:0 0 40px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10)}
+.proof-num{font-family:var(--serif);font-size:clamp(52px,6vw,86px);color:var(--gold);line-height:1;margin-bottom:10px;text-shadow:0 0 40px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .proof-label{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg-mute);line-height:1.55}
 @media(max-width:720px){.proof-grid{grid-template-columns:repeat(2,1fr)}.proof-cell{padding:30px 20px}}
 
@@ -220,7 +220,7 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .ben-cell:hover{background:var(--bg-2)}
 .ben-cell:hover .ben-num{color:var(--gold)}
 .ben-num{font-family:var(--mono);font-size:11px;color:var(--fg-mute);letter-spacing:0.15em;transition:color .25s}
-.ben-big{font-family:var(--serif);font-size:70px;line-height:1;color:var(--gold);margin:20px 0 4px;text-shadow:0 0 36px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10)}
+.ben-big{font-family:var(--serif);font-size:70px;line-height:1;color:var(--gold);margin:20px 0 4px;text-shadow:0 0 36px rgba(201,169,97,.28),0 0 80px rgba(201,169,97,.10);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .ben-big-sub{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg-mute);margin-bottom:24px}
 .ben-title{font-family:var(--serif);font-size:25px;line-height:1.1;margin-bottom:9px}
 .ben-text{font-size:13px;color:var(--fg-dim);line-height:1.62}
@@ -231,7 +231,7 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
 .step{padding:44px 28px 44px 0;border-right:1px solid var(--line)}
 .step:last-child{border-right:0}
-.step-num{font-family:var(--serif);font-size:68px;line-height:1;color:var(--gold);margin-bottom:20px;font-style:italic;letter-spacing:-0.02em}
+.step-num{font-family:var(--serif);font-size:68px;line-height:1;color:var(--gold);margin-bottom:20px;font-style:italic;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
 .step-title{font-family:var(--serif);font-size:24px;margin-bottom:10px;line-height:1.15}
 .step-text{font-size:13px;color:var(--fg-dim);line-height:1.68;margin-bottom:14px}
 .step-time{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)}
@@ -268,6 +268,38 @@ h2.sec-title em{font-style:italic;color:var(--gold)}
 .review-name{font-weight:600;font-size:14px;margin-bottom:3px}
 .review-meta{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg-mute)}
 @media(max-width:900px){.reviews-grid{grid-template-columns:1fr}}
+
+/* ── PROJECTS / CASES ─────────────────────────────────────────────────────── */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.project-card{position:relative;background:var(--bg-2);overflow:hidden;cursor:pointer;display:block;border:0;padding:0;font:inherit;color:inherit;text-align:left;width:100%;transition:background .2s}
+.project-card:hover{background:var(--bg-3)}
+.project-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg-3)}
+.project-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease-out)}
+.project-card:hover .project-media img{transform:scale(1.04)}
+.project-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0) 40%,rgba(10,10,10,0.55) 75%,rgba(10,10,10,0.92) 100%);pointer-events:none;transition:opacity .3s}
+.project-info{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;z-index:2;color:var(--fg);transform:translateY(6px);transition:transform .35s var(--ease-out)}
+.project-card:hover .project-info{transform:translateY(0)}
+.project-type{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
+.project-title{font-family:var(--serif);font-size:22px;line-height:1.15;margin-bottom:5px;color:var(--fg)}
+.project-sub{font-size:12px;color:var(--fg-dim);line-height:1.45}
+.project-icon{position:absolute;top:14px;right:14px;width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(201,169,97,.5);color:var(--gold);background:rgba(10,10,10,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transform:scale(.92);transition:all .3s;font-family:var(--mono);font-size:14px;z-index:3;pointer-events:none}
+.project-card:hover .project-icon{opacity:1;transform:scale(1)}
+.project-card:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
+@media(max-width:960px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.projects-grid{grid-template-columns:1fr}.project-title{font-size:20px}}
+
+/* ── LIGHTBOX ─────────────────────────────────────────────────────────────── */
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:60px 24px 28px;opacity:0;transition:opacity .25s}
+.lightbox.show{display:flex;opacity:1}
+.lightbox-inner{max-width:1200px;width:100%;position:relative}
+.lightbox-img{width:100%;height:auto;display:block;max-height:78vh;object-fit:contain;border:1px solid rgba(201,169,97,.18);background:var(--bg-2)}
+.lightbox-cap{margin-top:16px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.lightbox-meta-type{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:block}
+.lightbox-meta-title{font-family:var(--serif);font-size:24px;line-height:1.15;color:var(--fg)}
+.lightbox-meta-sub{font-size:13px;color:var(--fg-dim);font-family:var(--mono);letter-spacing:0.06em}
+.lightbox-close{position:absolute;top:-50px;right:0;background:transparent;border:1px solid var(--line-2);color:var(--fg);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;transition:all .2s;font-family:var(--mono);font-size:18px;line-height:1}
+.lightbox-close:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:720px){.lightbox{padding:0 0 16px}.lightbox-inner{padding:0 16px}.lightbox-close{top:16px;right:16px;width:44px;height:44px;font-size:22px;background:rgba(10,10,10,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.lightbox-meta-title{font-size:18px}}
 
 /* ── FORM ────────────────────────────────────────────────────────────────── */
 .calc{background:var(--bg-2);border:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr}
@@ -356,7 +388,17 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
 .sticky-cta-call:hover{border-color:var(--gold);color:var(--gold)}
 .sticky-cta-btn{background:var(--gold);color:#0A0A0A;padding:11px 18px;font-weight:700;font-size:12px;white-space:nowrap;cursor:pointer;border:0;font-family:var(--sans);transition:background .2s}
 .sticky-cta-btn:hover{background:var(--gold-2)}
+.sticky-cta-msg{background:transparent;border:1px solid var(--line-2);color:var(--fg);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;transition:all .2s;flex-shrink:0;text-decoration:none}
+.sticky-cta-msg:hover{border-color:var(--gold);color:var(--gold)}
 @media(max-width:720px){.sticky-cta{display:flex}}
+@media(max-width:380px){.sticky-cta-msg{display:none}}
+
+/* ── MESSENGER ROW (contact section) ────────────────────────────────────── */
+.msg-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.msg-pill{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid var(--line-2);color:var(--fg-dim);font-size:13px;font-family:var(--sans);text-decoration:none;transition:all .2s}
+.msg-pill:hover{border-color:var(--gold);color:var(--gold)}
+.msg-pill svg{flex-shrink:0;color:var(--gold)}
+.msg-pill-label{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg-mute);margin-bottom:10px;display:block}
 
 /* ── FLOATING CALL BUTTON (desktop) ─────────────────────────────────────── */
 .float-call{position:fixed;right:28px;bottom:36px;z-index:80;background:var(--gold);color:#0A0A0A;display:flex;align-items:center;gap:10px;padding:14px 22px;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:0.01em;border:0;cursor:pointer;text-decoration:none;transform:translateX(140%);transition:transform .5s var(--ease-out),background .2s,box-shadow .2s;box-shadow:0 8px 32px rgba(201,169,97,0.35)}
@@ -946,13 +988,99 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   </div>
 </section>
 
+<!-- PROJECTS / CASES -->
+<section id="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="sec-eyebrow">
+          <span class="sec-num">06</span>
+          <span class="sec-label">Реальні роботи</span>
+        </div>
+        <h2 class="sec-title" id="projects-title">Наші <em>встановлення</em></h2>
+      </div>
+      <p class="sec-desc">
+        Більше 340 СЕС у Львові та області — від приватних будинків до промислових дахів. Реальні об'єкти, реальна економія для реальних клієнтів.
+      </p>
+    </div>
+    <div class="projects-grid">
+      <button class="project-card reveal" type="button" data-pid="1" aria-label="Відкрити фото: Захід сонця, дахова СЕС">
+        <div class="project-media">
+          <img src="/assets/projects/project-1-sunset-600.webp" srcset="/assets/projects/project-1-sunset-600.webp 600w, /assets/projects/project-1-sunset-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на даху приватного будинку на заході сонця, Львівщина">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Дахова СЕС</span>
+          <div class="project-title">Захід сонця</div>
+          <div class="project-sub">Львівщина · приватний будинок</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-1" type="button" data-pid="2" aria-label="Відкрити фото: Преміум монтаж, приватний будинок">
+        <div class="project-media">
+          <img src="/assets/projects/project-2-modern-home-600.webp" srcset="/assets/projects/project-2-modern-home-600.webp 600w, /assets/projects/project-2-modern-home-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на даху сучасного приватного будинку, преміум монтаж, Львів">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Приватний будинок</span>
+          <div class="project-title">Преміум монтаж</div>
+          <div class="project-sub">Львів · інтегрована система</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-2" type="button" data-pid="3" aria-label="Відкрити фото: Львівщина, дахова СЕС на черепиці">
+        <div class="project-media">
+          <img src="/assets/projects/project-3-tile-roof-600.webp" srcset="/assets/projects/project-3-tile-roof-600.webp 600w, /assets/projects/project-3-tile-roof-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція на черепичному даху приватного будинку, Львівська область">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Приватний будинок</span>
+          <div class="project-title">Черепичний дах</div>
+          <div class="project-sub">Львівська область</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal" type="button" data-pid="4" aria-label="Відкрити фото: Сучасний дім з повним покриттям даху">
+        <div class="project-media">
+          <img src="/assets/projects/project-4-bright-home-600.webp" srcset="/assets/projects/project-4-bright-home-600.webp 600w, /assets/projects/project-4-bright-home-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Сонячна станція з повним покриттям скатного даху на сучасному приватному будинку, Львів">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Приватний будинок</span>
+          <div class="project-title">Повне покриття даху</div>
+          <div class="project-sub">Сонячне покриття · Львів</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-1" type="button" data-pid="5" aria-label="Відкрити фото: Промислова СЕС, комерційний об'єкт">
+        <div class="project-media">
+          <img src="/assets/projects/project-5-commercial-600.webp" srcset="/assets/projects/project-5-commercial-600.webp 600w, /assets/projects/project-5-commercial-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Промислова сонячна станція на плоскому даху комерційного об'єкта">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Бізнес-об'єкт</span>
+          <div class="project-title">Промисловий дах</div>
+          <div class="project-sub">Комерційна СЕС · Львівщина</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+      <button class="project-card reveal reveal-delay-2" type="button" data-pid="6" aria-label="Відкрити фото: Зимова експлуатація СЕС, бізнес">
+        <div class="project-media">
+          <img src="/assets/projects/project-6-winter-600.webp" srcset="/assets/projects/project-6-winter-600.webp 600w, /assets/projects/project-6-winter-1200.webp 1200w" sizes="(max-width:540px) 100vw, (max-width:960px) 50vw, 33vw" width="1200" height="900" loading="lazy" decoding="async" alt="Бригада на даху комерційного об'єкта зимою — сонячна станція працює цілорічно">
+        </div>
+        <div class="project-info">
+          <span class="project-type">Бізнес-об'єкт</span>
+          <div class="project-title">Зимова експлуатація</div>
+          <div class="project-sub">Цілорічна робота · Львівщина</div>
+        </div>
+        <div class="project-icon" aria-hidden="true">↗</div>
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- FORM -->
 <section id="contact" aria-labelledby="contact-title">
   <div class="container">
     <div class="calc">
       <div class="calc-l">
         <div class="calc-eyebrow">
-          <span class="sec-num">06</span>
+          <span class="sec-num">07</span>
           <span class="sec-label">Безкоштовний розрахунок</span>
         </div>
         <h2 class="calc-h" id="contact-title">Дізнайтесь скільки <em>зекономите</em></h2>
@@ -975,6 +1103,21 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
             <span>Відповідь <strong>протягом 15 хвилин</strong></span>
           </li>
         </ul>
+        <span class="msg-pill-label">Або напишіть нам напряму</span>
+        <div class="msg-row" role="list" aria-label="Месенджери для зв'язку">
+          <a class="msg-pill" href="viber://chat?number=%2B380675554000" rel="noopener" role="listitem" aria-label="Написати у Viber">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 1.5C7.3 1.6 3.3 2.4 1.9 4.6c-.9 1.4-1 4.1-.8 6.6.2 2.4.8 5 2.7 6.4.7.6 1.9.9 1.9.9v3l3.1-2.7c.4 0 .9.1 1.4.1 4.1 0 8.1-.8 9.5-3 .9-1.4 1-4.1.8-6.6-.2-2.4-.8-5-2.7-6.4-1.8-1.4-4.5-1.5-6.4-1.4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 8c.5-.4 1.4-.6 2 0l.8 1.2c.3.4.1.9-.3 1.1l-.6.3a4 4 0 002.4 2.4l.3-.6c.2-.4.7-.6 1.1-.3l1.2.8c.6.6.4 1.5 0 2-1.2 1.3-3.2.4-5-1.4S6.7 9.2 8 8z" fill="currentColor"/></svg>
+            Viber
+          </a>
+          <a class="msg-pill" href="https://t.me/+380675554000" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Написати в Telegram">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="1.3"/><path d="M7 12.2l9.5-3.8c.4-.2.8.2.7.6l-1.6 7.5c-.1.4-.6.6-.9.3l-2.4-1.9-1.3 1.3c-.2.2-.5.1-.5-.2l-.1-2.5L15 9.9l-5.6 3.1L7 12.2z" fill="currentColor"/></svg>
+            Telegram
+          </a>
+          <a class="msg-pill" href="tel:+380675554000" role="listitem" aria-label="Зателефонувати">
+            <svg width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3l1 3.5-2 1.5a9 9 0 004 4l1.5-2 3.5 1v3c0 .8-.7 1.5-1.5 1.5C5.5 14 1.5 9.5 1.5 4c0-.8.7-1.5 1.5-2.5z" stroke="currentColor" stroke-width="1.3"/></svg>
+            Дзвінок
+          </a>
+        </div>
         <div class="urgency-box" role="status">
           <div class="urgency-box-dot" aria-hidden="true"></div>
           <div class="urgency-box-text">⚡ Залишилось 3 місця на монтаж у <span class="urgency-month">цьому місяці</span></div>
@@ -987,8 +1130,9 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
             <input type="text" id="fwebsite" name="website" tabindex="-1" autocomplete="off">
           </div>
           <div class="field">
-            <label class="field-label" for="fname">Ваше ім'я</label>
-            <input class="field-input" id="fname" name="name" type="text" placeholder="Іван Петренко" autocomplete="given-name">
+            <label class="field-label" for="fname">Ваше ім'я <span style="color:var(--gold)" aria-label="обов'язкове поле">*</span></label>
+            <input class="field-input" id="fname" name="name" type="text" placeholder="Іван Петренко" autocomplete="name" minlength="2" required aria-required="true" aria-describedby="nameError">
+            <div class="field-error" id="nameError" role="alert" aria-live="polite">Будь ласка, введіть ваше ім'я</div>
           </div>
           <div class="field">
             <label class="field-label" for="fphone">Телефон <span style="color:var(--gold)" aria-label="обов'язкове поле">*</span></label>
@@ -1067,7 +1211,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     <div class="sec-head">
       <div>
         <div class="sec-eyebrow">
-          <span class="sec-num">07</span>
+          <span class="sec-num">08</span>
           <span class="sec-label">Відповіді на запитання</span>
         </div>
         <h2 class="sec-title" id="faq-title">Часті <em>питання</em></h2>
@@ -1153,10 +1297,10 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       </div>
       <div class="foot-col">
         <h4>Компанія</h4>
-        <a href="#">Про нас</a>
-        <a href="#">Наші роботи</a>
+        <a href="#benefits">Переваги</a>
+        <a href="#projects">Реальні роботи</a>
         <a href="#reviews">Відгуки клієнтів</a>
-        <a href="#">Блог</a>
+        <a href="#faq">Питання та відповіді</a>
       </div>
       <div class="foot-col">
         <h4>Контакти</h4>
@@ -1171,7 +1315,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     </div>
     <div class="foot-bot">
       <span>© <span id="yr"></span> SOLOMIYA ENERGY. Всі права захищені.</span>
-      <a href="#" style="text-decoration:none">Політика конфіденційності</a>
+      <a href="#faq" style="text-decoration:none">Політика конфіденційності</a>
     </div>
   </div>
 </footer>
@@ -1182,6 +1326,21 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   Передзвоніть
 </a>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Закрити" type="button">×</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-cap">
+      <div>
+        <span class="lightbox-meta-type" id="lightboxType"></span>
+        <div class="lightbox-meta-title" id="lightboxTitle"></div>
+      </div>
+      <div class="lightbox-meta-sub" id="lightboxSub"></div>
+    </div>
+  </div>
+</div>
+
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Швидке замовлення">
   <div class="sticky-cta-info">
@@ -1189,10 +1348,16 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     <span>Безкоштовно · 15 хвилин</span>
   </div>
   <div class="sticky-cta-actions">
+    <a href="viber://chat?number=%2B380675554000" class="sticky-cta-msg" aria-label="Написати у Viber" rel="noopener">
+      <svg width="15" height="15" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 1.5C7.3 1.6 3.3 2.4 1.9 4.6c-.9 1.4-1 4.1-.8 6.6.2 2.4.8 5 2.7 6.4.7.6 1.9.9 1.9.9v3l3.1-2.7c.4 0 .9.1 1.4.1 4.1 0 8.1-.8 9.5-3 .9-1.4 1-4.1.8-6.6-.2-2.4-.8-5-2.7-6.4-1.8-1.4-4.5-1.5-6.4-1.4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 8c.5-.4 1.4-.6 2 0l.8 1.2c.3.4.1.9-.3 1.1l-.6.3a4 4 0 002.4 2.4l.3-.6c.2-.4.7-.6 1.1-.3l1.2.8c.6.6.4 1.5 0 2-1.2 1.3-3.2.4-5-1.4S6.7 9.2 8 8z" fill="currentColor"/></svg>
+    </a>
+    <a href="https://t.me/+380675554000" class="sticky-cta-msg" aria-label="Написати в Telegram" target="_blank" rel="noopener noreferrer">
+      <svg width="15" height="15" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="1.3"/><path d="M7 12.2l9.5-3.8c.4-.2.8.2.7.6l-1.6 7.5c-.1.4-.6.6-.9.3l-2.4-1.9-1.3 1.3c-.2.2-.5.1-.5-.2l-.1-2.5L15 9.9l-5.6 3.1L7 12.2z" fill="currentColor"/></svg>
+    </a>
     <a href="tel:+380675554000" class="sticky-cta-call" aria-label="Зателефонувати">
       <svg width="13" height="13" fill="none" viewBox="0 0 13 13" aria-hidden="true"><path d="M2 1h2.5l.8 2.8-1.6 1.2a7 7 0 003.3 3.3l1.2-1.6L11 7.5V10c0 .6-.5 1-1 1C3.5 11 1 7 1 3c0-.5.4-1 1-2z" stroke="currentColor" stroke-width="1.2"/></svg>
     </a>
-    <button class="sticky-cta-btn" id="stickyCtaBtn">Залишити заявку</button>
+    <button class="sticky-cta-btn" id="stickyCtaBtn">Заявка</button>
   </div>
 </div>
 
@@ -1228,6 +1393,8 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
   /* ── Form submission → /api/lead ─────────────────────────────────────── */
   var form       = document.getElementById('mainForm');
   var success    = document.getElementById('formSuccess');
+  var nameInput  = document.getElementById('fname');
+  var nameError  = document.getElementById('nameError');
   var phoneInput = document.getElementById('fphone');
   var phoneError = document.getElementById('phoneError');
   var apiError   = document.getElementById('formApiError');
@@ -1239,6 +1406,19 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     /* honeypot check */
     var hp = document.getElementById('fwebsite');
     if (hp && hp.value) return;
+
+    var name = nameInput.value.trim();
+    if (name.length < 2) {
+      nameError.textContent = name
+        ? "Ім'я має містити щонайменше 2 символи"
+        : "Будь ласка, введіть ваше ім'я";
+      nameError.style.display = 'block';
+      nameInput.classList.add('error');
+      nameInput.focus();
+      return;
+    }
+    nameError.style.display = 'none';
+    nameInput.classList.remove('error');
 
     var phone = phoneInput.value.trim();
     if (!phone || !isValidPhone(phone)) {
@@ -1255,7 +1435,7 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
     apiError.style.display = 'none';
 
     var data = {
-      name  : document.getElementById('fname').value.trim(),
+      name  : name,
       phone : phone,
       type  : (document.querySelector('input[name="type"]:checked')  || {}).value || '',
       power : (document.querySelector('input[name="power"]:checked') || {}).value || '',
@@ -1282,6 +1462,10 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
         form.style.display    = 'none';
         success.style.display = 'block';
         success.focus();
+        var sCta = document.getElementById('stickyCta');
+        if (sCta) sCta.classList.remove('show');
+        var fCall = document.getElementById('floatCall');
+        if (fCall) fCall.classList.remove('show');
       } else {
         throw new Error(result.json.error || 'Server error');
       }
@@ -1291,6 +1475,11 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       submitBtn.disabled = false;
       submitBtn.textContent = 'Отримати розрахунок безкоштовно →';
     });
+  });
+
+  nameInput.addEventListener('input', function () {
+    nameError.style.display = 'none';
+    nameInput.classList.remove('error');
   });
 
   phoneInput.addEventListener('input', function () {
@@ -1427,6 +1616,64 @@ footer{background:var(--bg);padding:56px 0 28px;border-top:1px solid var(--line)
       requestAnimationFrame(updateScrollUI);
     }
   }, { passive: true });
+
+  /* ── Projects lightbox ──────────────────────────────────────────────── */
+  var projectsData = {
+    '1': { src: '/assets/projects/project-1-sunset-1200.webp',       type: 'Дахова СЕС',         title: 'Захід сонця',           sub: 'Львівщина · приватний будинок' },
+    '2': { src: '/assets/projects/project-2-modern-home-1200.webp',  type: 'Приватний будинок',  title: 'Преміум монтаж',        sub: 'Львів · інтегрована система' },
+    '3': { src: '/assets/projects/project-3-tile-roof-1200.webp',    type: 'Приватний будинок',  title: 'Черепичний дах',        sub: 'Львівська область' },
+    '4': { src: '/assets/projects/project-4-bright-home-1200.webp',  type: 'Приватний будинок',  title: 'Повне покриття даху',   sub: 'Сонячне покриття · Львів' },
+    '5': { src: '/assets/projects/project-5-commercial-1200.webp',   type: "Бізнес-об'єкт",      title: 'Промисловий дах',       sub: 'Комерційна СЕС · Львівщина' },
+    '6': { src: '/assets/projects/project-6-winter-1200.webp',       type: "Бізнес-об'єкт",      title: 'Зимова експлуатація',   sub: 'Цілорічна робота · Львівщина' }
+  };
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
+  var lightboxType  = document.getElementById('lightboxType');
+  var lightboxTitle = document.getElementById('lightboxTitle');
+  var lightboxSub   = document.getElementById('lightboxSub');
+  var lightboxClose = document.getElementById('lightboxClose');
+  var lastFocus     = null;
+
+  function openLightbox(pid) {
+    var p = projectsData[pid];
+    if (!p || !lightbox) return;
+    lastFocus = document.activeElement;
+    lightboxImg.src = p.src;
+    lightboxImg.alt = p.type + ' — ' + p.title;
+    lightboxType.textContent = p.type;
+    lightboxTitle.textContent = p.title;
+    lightboxSub.textContent = p.sub;
+    lightbox.classList.add('show');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { lightboxClose.focus(); }, 30);
+  }
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('show');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.querySelectorAll('.project-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      openLightbox(card.getAttribute('data-pid'));
+    });
+  });
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox || !lightbox.classList.contains('show')) return;
+    if (e.key === 'Escape') { closeLightbox(); return; }
+    /* Focus trap — only one focusable element (close button), so any Tab keeps it there */
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      lightboxClose.focus();
+    }
+  });
 
   } catch (e) { console.error('[SE]', e); }
 })();
